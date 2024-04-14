@@ -25,9 +25,9 @@ namespace Model
         public int Score { get; set; }
         [MaxLength(60), Column("Name")]
         public string Name { get; set; }
-        public IEnumerable<Opinion> Opinions { get; set; }
+        public IEnumerable<Opinion> ?Opinions { get; set; }
        // [ForeignKey(nameof(ScreeningID))]                 //Blad w schemacie Encji
-        public IEnumerable<Screening> Screenings { get; set; }
+        public IEnumerable<Screening> ?Screenings { get; set; }
 
         public void Configure(EntityTypeBuilder<Movie> builder)
         {

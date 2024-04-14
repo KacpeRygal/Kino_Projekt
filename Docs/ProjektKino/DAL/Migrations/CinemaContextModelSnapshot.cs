@@ -48,7 +48,7 @@ namespace DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Halls");
+                    b.ToTable("Halls", (string)null);
                 });
 
             modelBuilder.Entity("Model.Movie", b =>
@@ -82,7 +82,7 @@ namespace DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Movie", (string)null);
                 });
 
             modelBuilder.Entity("Model.Opinion", b =>
@@ -118,7 +118,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Opinion");
+                    b.ToTable("Opinion", (string)null);
                 });
 
             modelBuilder.Entity("Model.Screening", b =>
@@ -148,7 +148,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("MovieID");
 
-                    b.ToTable("Screening");
+                    b.ToTable("Screening", (string)null);
                 });
 
             modelBuilder.Entity("Model.Seat", b =>
@@ -186,7 +186,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("TicketID");
 
-                    b.ToTable("Seat");
+                    b.ToTable("Seat", (string)null);
                 });
 
             modelBuilder.Entity("Model.Ticket", b =>
@@ -220,7 +220,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("Ticket");
+                    b.ToTable("Ticket", (string)null);
                 });
 
             modelBuilder.Entity("Model.User", b =>
@@ -260,7 +260,7 @@ namespace DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("User");
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("Model.Opinion", b =>

@@ -169,7 +169,7 @@ namespace DAL.Migrations
                         column: x => x.TicketID,
                         principalTable: "Ticket",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
