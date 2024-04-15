@@ -29,7 +29,7 @@ namespace Model
         [ForeignKey(nameof(HallID))]
         public Hall Hall { get; set; }
         [ForeignKey(nameof(TicketID))]
-        public Ticket Ticket { get; set; }
+        public Ticket ?Ticket { get; set; }
 
         public void Configure(EntityTypeBuilder<Seat> builder)
         {

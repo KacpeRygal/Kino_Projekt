@@ -22,7 +22,7 @@ namespace Model
         [Column("Full")]
         public bool Full { get; set; }
         public HallTechnologyEnum Technology { get; set; }
-        public IEnumerable<Screening> Screenings { get; set; }
+        public IEnumerable<Screening>? Screenings { get; set; }
         public IEnumerable<Seat> Seats { get; set; }
 
         public void Configure(EntityTypeBuilder<Hall> builder)

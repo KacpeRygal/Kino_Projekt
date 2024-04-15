@@ -25,8 +25,8 @@ namespace Model
         public string Name { get; set; }
         [Column("CanReduce")]
         public bool CanReduce { get; set; }
-        public IEnumerable<Ticket> Tickets { get; set; }
-        public IEnumerable<Opinion> Opinions { get; set; }
+        public IEnumerable<Ticket> ?Tickets { get; set; }
+        public IEnumerable<Opinion> ?Opinions { get; set; }
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder

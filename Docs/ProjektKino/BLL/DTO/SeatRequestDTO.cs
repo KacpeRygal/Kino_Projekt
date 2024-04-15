@@ -15,7 +15,7 @@ namespace BLL.DTO
         public int Column { get; set; }
         public bool Occupied { get; set; }
         public Hall Hall { get; set; }
-        public Ticket Ticket { get; set; }
+        public Ticket ?Ticket { get; set; }
     
     }
 }
