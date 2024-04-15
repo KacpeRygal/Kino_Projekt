@@ -20,6 +20,8 @@ namespace BLL_EF
         public MovieResponseDTO GetMovie(int id)
         {
             Movie movie = dbContext.Movie.Find(id);
+            if (movie == null) return null;
+
             MovieResponseDTO response = new MovieResponseDTO
             {
                 ID = movie.ID,

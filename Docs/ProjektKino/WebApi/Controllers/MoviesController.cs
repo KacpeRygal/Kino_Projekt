@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using BLL_EF;
 using BLL;
 using BLL.DTO;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WebApi.Controllers
 {
@@ -13,10 +14,11 @@ namespace WebApi.Controllers
         public MoviesController(IMovieService movieService) { this.movieService = movieService; }
 
         [HttpPost]
-        public void Post([FromBody] MovieRequestDTO movieRequestDTO)
+        public void Post([FromQuery] MovieRequestDTO movieRequestDTO)
         {
             this.movieService.PostMovie(movieRequestDTO);
         }
+
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
@@ -24,7 +26,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] MovieRequestDTO movieRequestDTO)
+        public void Put(int id, [FromQuery] MovieRequestDTO movieRequestDTO)
         {
             this.movieService.PutMovie(id, movieRequestDTO);
         }
