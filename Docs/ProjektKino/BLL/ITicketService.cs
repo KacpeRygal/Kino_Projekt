@@ -12,6 +12,6 @@ namespace BLL
         TicketResponseDTO GetTicket(int id);
         void DeleteTicket(int id);
         void PutTicket(int id, TicketRequestDTO ticketRequestDTO);
-        void PostScreening(TicketRequestDTO ticketRequestDTO);
+        void PostTicket(TicketRequestDTO ticketRequestDTO);
     }
 }

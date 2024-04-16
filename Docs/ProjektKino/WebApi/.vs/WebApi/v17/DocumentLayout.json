@@ -3,38 +3,39 @@
   "WorkspaceRootPath": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{829C9F9D-8E6E-415C-9016-7E03A3F94A43}|..\\BLL\\BLL.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\bll\\iopinionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{829C9F9D-8E6E-415C-9016-7E03A3F94A43}|..\\BLL\\BLL.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\bll\\iscreeningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\webapi\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\model\\screening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\webapi\\controllers\\seatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\seatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\webapi\\controllers\\screeningscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\screeningscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C5EB6DAD-D54D-42FD-9956-90A7EF5983D2}|..\\BLL_EF\\BLL_EF.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\bll_ef\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\webapi\\controllers\\hallscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\hallscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C5EB6DAD-D54D-42FD-9956-90A7EF5983D2}|..\\BLL_EF\\BLL_EF.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\bll_ef\\seatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\webapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5EB6DAD-D54D-42FD-9956-90A7EF5983D2}|..\\BLL_EF\\BLL_EF.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\bll_ef\\screeningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5EB6DAD-D54D-42FD-9956-90A7EF5983D2}|..\\BLL_EF\\BLL_EF.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\bll_ef\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\model\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{829C9F9D-8E6E-415C-9016-7E03A3F94A43}|..\\BLL\\BLL.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\bll\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\webapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|c:\\users\\miko\u0142aj\\desktop\\kino_projekt\\docs\\projektkino\\model\\opinion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,10 +65,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -76,132 +73,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IScreeningService.cs",
-              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\IScreeningService.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\IScreeningService.cs",
-              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\IScreeningService.cs",
-              "RelativeToolTip": "..\\BLL\\IScreeningService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T19:47:13.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IOpinionService.cs",
-              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\IOpinionService.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\IOpinionService.cs",
-              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\IOpinionService.cs",
-              "RelativeToolTip": "..\\BLL\\IOpinionService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowCUAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T19:47:03.449Z",
+              "WhenOpened": "2024-04-16T08:28:51.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HallsController.cs",
-              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\HallsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HallsController.cs",
-              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\HallsController.cs",
-              "RelativeToolTip": "Controllers\\HallsController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowCUAAAAJAAAA",
+              "DocumentIndex": 1,
+              "Title": "TicketsController.cs",
+              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\TicketsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TicketsController.cs",
+              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\TicketsController.cs",
+              "RelativeToolTip": "Controllers\\TicketsController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAwwCYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T19:08:52.925Z",
+              "WhenOpened": "2024-04-16T08:28:13.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SeatsController.cs",
+              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\SeatsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SeatsController.cs",
+              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\SeatsController.cs",
+              "RelativeToolTip": "Controllers\\SeatsController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:12:41.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ScreeningsController.cs",
-              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\ScreeningsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ScreeningsController.cs",
-              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\ScreeningsController.cs",
-              "RelativeToolTip": "Controllers\\ScreeningsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\UserService.cs",
+              "RelativeDocumentMoniker": "..\\BLL_EF\\UserService.cs",
+              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\UserService.cs",
+              "RelativeToolTip": "..\\BLL_EF\\UserService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEMAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T19:07:41.784Z",
+              "WhenOpened": "2024-04-16T08:24:06.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SeatService.cs",
+              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\SeatService.cs",
+              "RelativeDocumentMoniker": "..\\BLL_EF\\SeatService.cs",
+              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\SeatService.cs",
+              "RelativeToolTip": "..\\BLL_EF\\SeatService.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwEYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:07:50.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\User.cs",
+              "RelativeDocumentMoniker": "..\\Model\\User.cs",
+              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\User.cs",
+              "RelativeToolTip": "..\\Model\\User.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T20:22:41.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Ticket.cs",
+              "RelativeDocumentMoniker": "..\\Model\\Ticket.cs",
+              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Ticket.cs",
+              "RelativeToolTip": "..\\Model\\Ticket.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:20:13.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Opinion.cs",
+              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Opinion.cs",
+              "RelativeDocumentMoniker": "..\\Model\\Opinion.cs",
+              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Opinion.cs",
+              "RelativeToolTip": "..\\Model\\Opinion.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T07:59:15.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MoviesController.cs",
               "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "Controllers\\MoviesController.cs",
               "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Controllers\\MoviesController.cs",
               "RelativeToolTip": "Controllers\\MoviesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAcwB8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T20:31:56.576Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ScreeningService.cs",
-              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\ScreeningService.cs",
-              "RelativeDocumentMoniker": "..\\BLL_EF\\ScreeningService.cs",
-              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\ScreeningService.cs",
-              "RelativeToolTip": "..\\BLL_EF\\ScreeningService.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAcwEIAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T19:01:17.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MovieService.cs",
-              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\MovieService.cs",
-              "RelativeDocumentMoniker": "..\\BLL_EF\\MovieService.cs",
-              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\MovieService.cs",
-              "RelativeToolTip": "..\\BLL_EF\\MovieService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T20:25:06.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IMovieService.cs",
-              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\IMovieService.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\IMovieService.cs",
-              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\IMovieService.cs",
-              "RelativeToolTip": "..\\BLL\\IMovieService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T20:23:01.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\WebApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABCAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T18:58:27.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Screening.cs",
-              "DocumentMoniker": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Screening.cs",
-              "RelativeDocumentMoniker": "..\\Model\\Screening.cs",
-              "ToolTip": "C:\\Users\\Miko\u0142aj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Screening.cs",
-              "RelativeToolTip": "..\\Model\\Screening.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T19:04:03.79Z",
               "EditorCaption": ""
             }
           ]

@@ -11,7 +11,7 @@ namespace BLL
     {
         UserResponseDTO GetUser(int id);
         void DeleteUser(int id);
-        void PutTickPutUser(int id, UserRequestDTO userRequestDTO);
-        void PostScreening(UserRequestDTO userRequestDTO);
+        void PutUser(int id, UserRequestDTO userRequestDTO);
+        void PostUser(UserRequestDTO userRequestDTO);
     }
 }
