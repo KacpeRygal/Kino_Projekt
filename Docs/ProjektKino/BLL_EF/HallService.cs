@@ -2,6 +2,7 @@
 using BLL.DTO;
 using DAL;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -32,8 +33,6 @@ namespace BLL_EF
                 Columns = hall.Columns,
                 Full = hall.Full,
                 Technology = hall.Technology,
-                Screenings = hall.Screenings,
-                Seats = hall.Seats
             };
             return response;
         }
@@ -51,8 +50,6 @@ namespace BLL_EF
                     Columns = hall.Columns,
                     Full = hall.Full,
                     Technology = hall.Technology,
-                    Screenings = hall.Screenings,
-                    Seats = hall.Seats
                 };
                 responseDTOs.Append(r);
             }
@@ -67,8 +64,6 @@ namespace BLL_EF
                 Columns = hallRequestDTO.Columns,
                 Full = hallRequestDTO.Full,
                 Technology = hallRequestDTO.Technology,
-                Screenings = hallRequestDTO.Screenings,
-                Seats = hallRequestDTO.Seats
             };
             dbContext.Hall.Add(hall);
             dbContext.SaveChanges();
@@ -81,9 +76,43 @@ namespace BLL_EF
             hall.Columns = hallRequestDTO.Columns;
             hall.Full = hallRequestDTO.Full;
             hall.Technology = hallRequestDTO.Technology;
-            hall.Screenings = hallRequestDTO.Screenings;
-            hall.Seats = hallRequestDTO.Seats;
             dbContext.SaveChanges();
+        }
+
+        public IEnumerable<ScreeningResponseDTO> GetScreenings(int id) 
+        {
+            var screenings = dbContext.Screening.Where(x=>x.HallID == id);
+            for (int i = 0; i < screenings.Count(); i++)
+            {
+                Screening sc = screenings.ElementAt(i);
+                ScreeningResponseDTO response = new ScreeningResponseDTO
+                {
+                    ID = sc.ID,
+                    HallID = sc.HallID,
+                    MovieID = sc.MovieID,
+                    Date = sc.Date
+                };
+                yield return response;
+            }
+        }
+
+        public IEnumerable<SeatResponseDTO> GetSeats(int id)
+        {
+            var seats = dbContext.Seat.Where(x=>x.HallID == id);
+            for (int i = 0; i < seats.Count(); i++)
+            {
+                Seat sc = seats.ElementAt(i);
+                SeatResponseDTO response = new SeatResponseDTO
+                {
+                    ID = sc.ID,
+                    HallID = sc.HallID,
+                    TicketID = sc.TicketID,
+                    Row = sc.Row,
+                    Column = sc.Column,
+                    Occupied = sc.Occupied
+                };
+                yield return response;
+            }
         }
     }
 }

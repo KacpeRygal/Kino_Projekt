@@ -13,7 +13,6 @@ namespace BLL.DTO
         public int Columns { get; set; }
         public bool Full { get; set; }
         public HallTechnologyEnum Technology { get; set; }
-        public IEnumerable<Screening> ?Screenings { get; set; }
-        public IEnumerable<Seat> ?Seats { get; set; }
+
     }
 }

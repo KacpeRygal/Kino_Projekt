@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         public OpinionsController(IOpinionService opinionService) { this.opinionService = opinionService; }
 
         [HttpPost]
-        public void Post([FromQuery] OpinionRequestDTO opinionRequestDTO)
+        public void Post([FromBody] OpinionRequestDTO opinionRequestDTO)
         {
             this.opinionService.PostOpinion(opinionRequestDTO);
         }
@@ -33,7 +33,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("get1/{id}")]
-        public OpinionResponseDTO GetHall([FromQuery] int id)
+        public OpinionResponseDTO GetOpinion(int id)
         {
             return this.opinionService.GetOpinion(id);
         }

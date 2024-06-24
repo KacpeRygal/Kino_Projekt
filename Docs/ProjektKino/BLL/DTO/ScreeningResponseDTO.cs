@@ -14,8 +14,6 @@ namespace BLL.DTO
         public int HallID { get; set; }
         public int MovieID { get; set; }
         public DateTime Date { get; set; }
-        public Hall Hall { get; set; }
-        public Movie Movie { get; set; }
-        public IEnumerable<Ticket> Tickets { get; set; }
+
     }
 }

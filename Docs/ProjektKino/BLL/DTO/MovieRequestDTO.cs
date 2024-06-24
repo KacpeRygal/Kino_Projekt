@@ -9,11 +9,11 @@ namespace BLL.DTO
 {
     public class MovieRequestDTO
     {
+        
         public DateTime Time { get; set; }
         public string Language { get; set; }
         public int Score { get; set; }
         public string Name { get; set; }
-        public IEnumerable<Opinion>? Opinions { get; set; }
-        public IEnumerable<Screening>? Screenings { get; set; }
+
     }
 }

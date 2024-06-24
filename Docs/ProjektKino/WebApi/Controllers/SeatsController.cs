@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         public SeatsController(ISeatService seatService) { this.seatService = seatService; }
 
         [HttpPost]
-        public void Post([FromQuery] SeatRequestDTO seatRequestDTO)
+        public void Post([FromBody] SeatRequestDTO seatRequestDTO)
         {
             this.seatService.PostSeat(seatRequestDTO);
         }
@@ -33,7 +33,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("get1/{id}")]
-        public SeatResponseDTO GetHall([FromQuery] int id)
+        public SeatResponseDTO GetSeat([FromQuery] int id)
         {
             return this.seatService.GetSeat(id);
         }

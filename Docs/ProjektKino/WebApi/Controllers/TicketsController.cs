@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         public TicketsController(ITicketService ticketService) { this.ticketService = ticketService; }
 
         [HttpPost]
-        public void Post([FromQuery] TicketRequestDTO ticketRequestDTO)
+        public void Post([FromBody] TicketRequestDTO ticketRequestDTO)
         {
             this.ticketService.PostTicket(ticketRequestDTO);
         }
@@ -33,9 +33,16 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("get1/{id}")]
-        public TicketResponseDTO GetHall([FromQuery] int id)
+        public TicketResponseDTO GetTicket(int id)
         {
             return this.ticketService.GetTicket(id);
+        }
+
+        [HttpGet]
+        [Route("getSeats/{id}")]
+        public IEnumerable<SeatResponseDTO> GetSeats(int id)
+        {
+            return this.ticketService.GetSeats(id);
         }
     }
 }

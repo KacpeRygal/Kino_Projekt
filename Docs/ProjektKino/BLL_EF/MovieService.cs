@@ -28,40 +28,36 @@ namespace BLL_EF
                 Time = movie.Time,
                 Language = movie.Language,
                 Score = movie.Score,
-                Screenings = movie.Screenings,
                 Name = movie.Name,
-                Opinions = movie.Opinions
             };
             return response;
         }
 
         public IEnumerable<MovieResponseDTO> GetMovies()
         {
-            IEnumerable<MovieResponseDTO> responseDTOs = new List<MovieResponseDTO>();
-            for(int i=0;i < dbContext.Movie.Count();i++)
+            var movies = dbContext.Movie;
+            for(int i=0;i < movies.Count();i++)
             {
-                Movie movie = dbContext.Movie.ElementAt(i);
+                Movie movie = movies.ElementAt(i);
                 MovieResponseDTO r = new MovieResponseDTO
                 {
                     ID = movie.ID,
                     Time = movie.Time,
                     Language = movie.Language,
                     Score = movie.Score,
-                    Screenings = movie.Screenings,
                     Name = movie.Name,
-                    Opinions = movie.Opinions
                 };
-                responseDTOs.Append(r);
+                yield return r;
             }
-            return responseDTOs;
         }
 
         public IEnumerable<OpinionResponseDTO> GetOpinions(int id)
         {
-            IEnumerable<OpinionResponseDTO> responseDTOs = new List<OpinionResponseDTO>();
-            for (int i = 0; i < dbContext.Movie.Find(id).Opinions.Count(); i++)
+            var opinions = dbContext.Opinion.Where(x => x.MovieID == id);
+
+            for (int i = 0; i < opinions.Count(); i++)
             {
-                Opinion sc = dbContext.Movie.Find(id).Opinions.ElementAt(i);
+                Opinion sc = opinions.ElementAt(i);
                 OpinionResponseDTO response = new OpinionResponseDTO
                 {
                     ID = sc.ID,
@@ -69,33 +65,27 @@ namespace BLL_EF
                     MovieID = sc.MovieID,
                     Value = sc.Value,
                     Content = sc.Content,
-                    User = sc.User,
-                    Movie = sc.Movie,
                 };
-                responseDTOs.Append(response);
+                yield return response;
             }
-            return responseDTOs;
         }
 
         public IEnumerable<ScreeningResponseDTO> GetScreenings(int id)
         {
             IEnumerable<ScreeningResponseDTO> responseDTOs = new List<ScreeningResponseDTO>();
-            for(int i = 0; i < dbContext.Movie.Find(id).Screenings.Count(); i++)
+            var screenings = dbContext.Screening.Where(x=> x.MovieID == id);
+            for(int i = 0; i < screenings.Count(); i++)
             {
-                Screening sc = dbContext.Movie.Find(id).Screenings.ElementAt(i);
+                Screening sc = screenings.ElementAt(i);
                 ScreeningResponseDTO response = new ScreeningResponseDTO
                 {
                     ID = sc.ID,
                     HallID = sc.HallID,
                     MovieID = sc.MovieID,
                     Date = sc.Date,
-                    Hall = sc.Hall,
-                    Movie = sc.Movie,
-                    Tickets = sc.Tickets,
                 };
-                responseDTOs.Append(response);
-            }
-            return responseDTOs;
+                yield return response;
+            } 
         }
 
         public void PostMovie(MovieRequestDTO movieRequestDTO)
@@ -106,8 +96,6 @@ namespace BLL_EF
                 Language = movieRequestDTO.Language,
                 Name = movieRequestDTO.Name,
                 Score = movieRequestDTO.Score,
-                Opinions = movieRequestDTO.Opinions,
-                Screenings = movieRequestDTO.Screenings
             };
             dbContext.Movie.Add(movie);
             dbContext.SaveChanges();
@@ -120,8 +108,6 @@ namespace BLL_EF
             movie.Language = movieRequestDTO.Language;
             movie.Name = movieRequestDTO.Name;
             movie.Score = movieRequestDTO.Score;
-            movie.Screenings = movieRequestDTO.Screenings;
-            movie.Opinions = movieRequestDTO.Opinions;
             dbContext.SaveChanges();
         }
     }

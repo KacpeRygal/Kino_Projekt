@@ -31,12 +31,9 @@ namespace BLL_EF
             TicketResponseDTO response = new TicketResponseDTO
             {
                 ID = ticket.ID,
-                User = ticket.User,
                 UserID = ticket.UserID,
                 Date = ticket.Date,
-                Screening = ticket.Screening,
                 ScreeningID = ticket.ScreeningID,
-                Seats = ticket.Seats,
                 Price = ticket.Price
             };
             return response;
@@ -46,12 +43,9 @@ namespace BLL_EF
         {
             Ticket ticket = new()
             {
-                User = ticketRequestDTO.User,
                 UserID = ticketRequestDTO.UserID,
                 Date = ticketRequestDTO.Date,
-                Screening = ticketRequestDTO.Screening,
                 ScreeningID = ticketRequestDTO.ScreeningID,
-                Seats = ticketRequestDTO.Seats,
                 Price = ticketRequestDTO.Price
             };
             dbContext.Ticket.Add(ticket);
@@ -61,14 +55,31 @@ namespace BLL_EF
         public void PutTicket(int id, TicketRequestDTO ticketRequestDTO)
         {
             Ticket ticket = dbContext.Ticket.Find(id);
-            ticket.User = ticketRequestDTO.User;
             ticket.UserID = ticketRequestDTO.UserID;
             ticket.Date = ticketRequestDTO.Date;
-            ticket.Screening = ticketRequestDTO.Screening;
             ticket.ScreeningID = ticketRequestDTO.ScreeningID;
-            ticket.Seats = ticketRequestDTO.Seats;
             ticket.Price = ticketRequestDTO.Price;
             dbContext.SaveChanges();
+        }
+
+        public IEnumerable<SeatResponseDTO> GetSeats(int id)
+        {
+            var seats = dbContext.Seat.Where(x => x.TicketID == id);
+
+            for (int i = 0; i < seats.Count(); i++)
+            {
+                Seat sc = seats.ElementAt(i);
+                SeatResponseDTO response = new SeatResponseDTO
+                {
+                    ID = sc.ID,
+                    TicketID = sc.TicketID,
+                    HallID = sc.HallID,
+                    Column = sc.Column,
+                    Row = sc.Row,
+                    Occupied = sc.Occupied
+                };
+                yield return response;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BLL.DTO;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,8 @@ namespace BLL
         void DeleteUser(int id);
         void PutUser(int id, UserRequestDTO userRequestDTO);
         void PostUser(UserRequestDTO userRequestDTO);
+
+        IEnumerable<TicketResponseDTO> GetTickets(int id);
+        public IEnumerable<OpinionResponseDTO> GetOpinions(int id);
     }
 }

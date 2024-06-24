@@ -14,7 +14,5 @@ namespace BLL.DTO
         public UserTypeEnum Type { get; set; }
         public string Name { get; set; }
         public bool CanReduce { get; set; }
-        public IEnumerable<Ticket> ?Tickets { get; set; }
-        public IEnumerable<Opinion> ?Opinions { get; set; }
     }
 }

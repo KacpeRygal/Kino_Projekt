@@ -13,8 +13,5 @@ namespace BLL.DTO
         public int ScreeningID { get; set; }
         public double Price { get; set; }
         public DateTime Date { get; set; }
-        public User User { get; set; }
-        public Screening Screening { get; set; }
-        public IEnumerable<Seat> Seats { get; set; }
     }
 }

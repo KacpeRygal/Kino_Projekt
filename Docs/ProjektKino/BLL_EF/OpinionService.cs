@@ -32,8 +32,6 @@ namespace BLL_EF
             {
                 ID = opinion.ID,
                 UserID = opinion.UserID,
-                User = opinion.User,
-                Movie = opinion.Movie,
                 MovieID = opinion.MovieID,
                 Content = opinion.Content,
                 Value = opinion.Value 
@@ -46,8 +44,6 @@ namespace BLL_EF
             Opinion opinion = new()
             {
                 UserID = opinionRequestDTO.UserID,
-                User = opinionRequestDTO.User,
-                Movie = opinionRequestDTO.Movie,
                 MovieID = opinionRequestDTO.MovieID,
                 Content = opinionRequestDTO.Content,
                 Value = opinionRequestDTO.Value
@@ -60,8 +56,6 @@ namespace BLL_EF
         {
             Opinion opinion = dbContext.Opinion.Find(id);
             opinion.UserID = opinionRequestDTO.UserID;
-            opinion.User = opinionRequestDTO.User;
-            opinion.Movie = opinionRequestDTO.Movie;
             opinion.MovieID = opinionRequestDTO.MovieID;
             opinion.Content = opinionRequestDTO.Content;
             opinion.Value = opinionRequestDTO.Value;

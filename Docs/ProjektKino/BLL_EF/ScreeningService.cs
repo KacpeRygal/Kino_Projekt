@@ -31,11 +31,8 @@ namespace BLL_EF
             {
                 ID = screening.ID,
                 Date = screening.Date,
-                Hall = screening.Hall,
                 HallID = screening.HallID,
-                Movie = screening.Movie,
                 MovieID = screening.MovieID,
-                Tickets = screening.Tickets,
             };
             return response;
         }
@@ -45,11 +42,8 @@ namespace BLL_EF
             Screening screening = new()
             {
                 Date = screeningRequestDTO.Date,
-                Hall = screeningRequestDTO.Hall,
                 HallID = screeningRequestDTO.HallID,
-                Movie = screeningRequestDTO.Movie,
                 MovieID = screeningRequestDTO.MovieID,
-                Tickets = screeningRequestDTO.Tickets,
             };
             dbContext.Screening.Add(screening);
             dbContext.SaveChanges();
@@ -59,12 +53,28 @@ namespace BLL_EF
         {
             Screening screening = dbContext.Screening.Find(id);
             screening.Date = screeningRequestDTO.Date;
-            screening.Hall = screeningRequestDTO.Hall;
             screening.HallID = screeningRequestDTO.HallID;
-            screening.Movie = screeningRequestDTO.Movie;
             screening.MovieID = screeningRequestDTO.MovieID;
-            screening.Tickets = screeningRequestDTO.Tickets;
             dbContext.SaveChanges();
+        }
+
+        public IEnumerable<TicketResponseDTO> GetTickets(int id)
+        {
+            var tickets = dbContext.Ticket.Where(x => x.ScreeningID == id);
+
+            for (int i = 0; i < tickets.Count(); i++)
+            {
+                Ticket sc = tickets.ElementAt(i);
+                TicketResponseDTO response = new TicketResponseDTO
+                {
+                    ID = sc.ID,
+                    UserID = sc.UserID,
+                    ScreeningID = sc.ScreeningID,
+                    Date = sc.Date,
+                    Price = sc.Price
+                };
+                yield return response;
+            }
         }
     }
 }

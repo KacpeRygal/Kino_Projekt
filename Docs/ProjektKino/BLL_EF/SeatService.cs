@@ -31,11 +31,9 @@ namespace BLL_EF
             SeatResponseDTO response = new SeatResponseDTO
             {
                 ID = seat.ID,
-                Ticket = seat.Ticket,
                 TicketID = seat.TicketID,
                 Column = seat.Column,
                 Row = seat.Row,
-                Hall = seat.Hall,
                 HallID = seat.HallID,
                 Occupied = seat.Occupied
             };
@@ -46,11 +44,9 @@ namespace BLL_EF
         {
             Seat seat = new()
             {
-                Ticket = seatRequestDTO.Ticket,
                 TicketID = seatRequestDTO.TicketID,
                 Column = seatRequestDTO.Column,
                 Row = seatRequestDTO.Row,
-                Hall = seatRequestDTO.Hall,
                 HallID = seatRequestDTO.HallID,
                 Occupied = seatRequestDTO.Occupied
             };
@@ -61,11 +57,9 @@ namespace BLL_EF
         public void PutSeat(int id, SeatRequestDTO seatRequestDTO)
         {
             Seat seat = dbContext.Seat.Find(id);
-            seat.Ticket = seatRequestDTO.Ticket;
             seat.TicketID = seatRequestDTO.TicketID;
             seat.Column = seatRequestDTO.Column;
             seat.Row = seatRequestDTO.Row;
-            seat.Hall = seatRequestDTO.Hall;
             seat.HallID = seatRequestDTO.HallID;
             seat.Occupied = seatRequestDTO.Occupied;
             dbContext.SaveChanges();

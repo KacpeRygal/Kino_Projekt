@@ -36,8 +36,6 @@ namespace BLL_EF
                 Type = user.Type,
                 Name = user.Name,
                 CanReduce = user.CanReduce,
-                Tickets = user.Tickets,
-                Opinions = user.Opinions,
             };
             return response;
         }
@@ -51,8 +49,6 @@ namespace BLL_EF
                 Type = userRequestDTO.Type,
                 Name = userRequestDTO.Name,
                 CanReduce = userRequestDTO.CanReduce,
-                Tickets = userRequestDTO.Tickets,
-                Opinions = userRequestDTO.Opinions,
             };
             dbContext.User.Add(user);
             dbContext.SaveChanges();
@@ -66,9 +62,45 @@ namespace BLL_EF
             user.Type = userRequestDTO.Type;
             user.Name = userRequestDTO.Name;
             user.CanReduce = userRequestDTO.CanReduce;
-            user.Tickets = userRequestDTO.Tickets;
-            user.Opinions = userRequestDTO.Opinions;
             dbContext.SaveChanges();
+        }
+
+        public IEnumerable<TicketResponseDTO> GetTickets(int id) 
+        {
+            var opinions = dbContext.Ticket.Where(x => x.UserID == id);
+
+            for (int i = 0; i < opinions.Count(); i++)
+            {
+                Ticket sc = opinions.ElementAt(i);
+                TicketResponseDTO response = new TicketResponseDTO
+                {
+                    ID = sc.ID,
+                    UserID = sc.UserID,
+                    ScreeningID = sc.ScreeningID,
+                    Date = sc.Date,
+                    Price = sc.Price
+                };
+                yield return response;
+            }
+        }
+
+        public IEnumerable<OpinionResponseDTO> GetOpinions(int id)
+        {
+            var opinions = dbContext.Opinion.Where(x => x.UserID == id);
+
+            for (int i = 0; i < opinions.Count(); i++)
+            {
+                Opinion sc = opinions.ElementAt(i);
+                OpinionResponseDTO response = new OpinionResponseDTO
+                {
+                    ID = sc.ID,
+                    UserID = sc.UserID,
+                    MovieID = sc.MovieID,
+                    Value = sc.Value,
+                    Content = sc.Content,
+                };
+                yield return response;
+            }
         }
     }
 }

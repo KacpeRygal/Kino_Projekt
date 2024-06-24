@@ -10,6 +10,7 @@ namespace BLL
     public interface IScreeningService
     {
         ScreeningResponseDTO GetScreening(int id);
+        IEnumerable<TicketResponseDTO> GetTickets(int id);
         void DeleteScreening(int id);
         void PutScreening(int id, ScreeningRequestDTO screeningRequestDTO);
         void PostScreening(ScreeningRequestDTO screeningRequestDTO);

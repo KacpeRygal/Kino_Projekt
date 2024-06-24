@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         public UsersController(IUserService userService) { this.userService = userService; }
 
         [HttpPost]
-        public void Post([FromQuery] UserRequestDTO userRequestDTO)
+        public void Post([FromBody] UserRequestDTO userRequestDTO)
         {
             this.userService.PostUser(userRequestDTO);
         }
@@ -33,9 +33,23 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("get1/{id}")]
-        public UserResponseDTO GetHall([FromQuery] int id)
+        public UserResponseDTO GetUser([FromQuery] int id)
         {
             return this.userService.GetUser(id);
+        }
+
+        [HttpGet]
+        [Route("getTickets/{id}")]
+        public IEnumerable<TicketResponseDTO> GetTickets(int id)
+        {
+            return this.userService.GetTickets(id);
+        }
+
+        [HttpGet]
+        [Route("getOpinions/{id}")]
+        public IEnumerable<OpinionResponseDTO> GetOpinions(int id)
+        {
+            return this.userService.GetOpinions(id);
         }
     }
 }

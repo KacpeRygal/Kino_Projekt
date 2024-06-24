@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         public ScreeningsController(IScreeningService screeningService) { this.screeningService = screeningService; }
 
         [HttpPost]
-        public void Post([FromQuery] ScreeningRequestDTO screeningRequestDTO)
+        public void Post([FromBody] ScreeningRequestDTO screeningRequestDTO)
         {
             this.screeningService.PostScreening(screeningRequestDTO);
         }
@@ -33,9 +33,16 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("get1/{id}")]
-        public ScreeningResponseDTO GetHall([FromQuery] int id)
+        public ScreeningResponseDTO GetScreening(int id)
         {
             return this.screeningService.GetScreening(id);
+        }
+
+        [HttpGet]
+        [Route("getTickets/{id}")]
+        public IEnumerable<TicketResponseDTO> GetTickets(int id)
+        {
+            return this.screeningService.GetTickets(id);
         }
 
     }

@@ -13,7 +13,5 @@ namespace BLL.DTO
         public int MovieID { get; set; }
         public int Value { get; set; }
         public string Content { get; set; }
-        public User User { get; set; }
-        public Movie Movie { get; set; }
     }
 }

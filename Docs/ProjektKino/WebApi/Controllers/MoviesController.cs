@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         public MoviesController(IMovieService movieService) { this.movieService = movieService; }
 
         [HttpPost]
-        public void Post([FromQuery] MovieRequestDTO movieRequestDTO)
+        public void Post([FromBody] MovieRequestDTO movieRequestDTO)
         {
             this.movieService.PostMovie(movieRequestDTO);
         }
@@ -26,35 +26,35 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromQuery] MovieRequestDTO movieRequestDTO)
+        public void Put(int id, [FromBody] MovieRequestDTO movieRequestDTO)
         {
             this.movieService.PutMovie(id, movieRequestDTO);
         }
 
         [HttpGet]
         [Route("get1/{id}")]
-        public MovieResponseDTO GetMovie([FromQuery]  int id)
+        public MovieResponseDTO GetMovie(int id)
         {
             return this.movieService.GetMovie(id);
         }
 
         [HttpGet]
-        [Route("get2/")]
+        [Route("getMovies/")]
         public IEnumerable<MovieResponseDTO> GetMovies()
         {
             return this.movieService.GetMovies();
         }
 
         [HttpGet]
-        [Route("get3/{id}")]
-        public IEnumerable<OpinionResponseDTO> GetOpinions([FromQuery] int id)
+        [Route("getOpinions/{id}")]
+        public IEnumerable<OpinionResponseDTO> GetOpinions(int id)
         {
             return this.movieService.GetOpinions(id);
         }
 
         [HttpGet]
-        [Route("get4/{id}")]
-        public IEnumerable<ScreeningResponseDTO> GetScreenings([FromQuery] int id)
+        [Route("getScreenings/{id}")]
+        public IEnumerable<ScreeningResponseDTO> GetScreenings(int id)
         {
             return this.movieService.GetScreenings(id);
         }

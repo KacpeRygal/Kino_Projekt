@@ -13,7 +13,7 @@ namespace WebApi.Controllers
         public HallsController(IHallService hallService) { this.hallService = hallService; }
 
         [HttpPost]
-        public void Post([FromQuery] HallRequestDTO hallRequestDTO)
+        public void Post([FromBody] HallRequestDTO hallRequestDTO)
         {
             this.hallService.PostHall(hallRequestDTO);
         }
@@ -31,17 +31,31 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("get1/{id}")]
+        [Route("getHall/{id}")]
         public HallResponseDTO GetHall([FromQuery] int id)
         {
             return this.hallService.GetHall(id);
         }
 
         [HttpGet]
-        [Route("get2/")]
+        [Route("getHalls/")]
         public IEnumerable<HallResponseDTO> GetHalls()
         {
             return this.hallService.GetHalls();
+        }
+
+        [HttpGet]
+        [Route("getScreenings/{id}")]
+        public IEnumerable<ScreeningResponseDTO> GetScreenings(int id)
+        {
+            return this.hallService.GetScreenings(id);
+        }
+
+        [HttpGet]
+        [Route("getSeats/{id}")]
+        public IEnumerable<SeatResponseDTO> GetSeats(int id)
+        {
+            return this.hallService.GetSeats(id);
         }
     }
 }
