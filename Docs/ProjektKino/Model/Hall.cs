@@ -41,9 +41,9 @@ namespace Model
     }
     public enum HallTechnologyEnum
     {
-        IMAX,
-        ScreenX,
-        HDR,
-        HFR
+        IMAX=0,
+        ScreenX=1,
+        HDR=2,
+        HFR=3
     }
 }
