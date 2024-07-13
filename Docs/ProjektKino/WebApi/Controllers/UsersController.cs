@@ -33,7 +33,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("get1/{id}")]
-        public UserResponseDTO GetUser([FromQuery] int id)
+        public UserResponseDTO GetUser(int id)
         {
             return this.userService.GetUser(id);
         }
