@@ -11,6 +11,7 @@ import { SeatsComponent } from './seats/seats.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OpinionRowComponent } from './opinion-row/opinion-row.component';
+import { ScreeningRowComponent } from './screening-row/screening-row.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OpinionRowComponent } from './opinion-row/opinion-row.component';
     LogRegComponent,
     MovieComponent,
     SeatsComponent,
-    OpinionRowComponent
+    OpinionRowComponent,
+    ScreeningRowComponent,
   ],
   imports: [
     BrowserModule,
