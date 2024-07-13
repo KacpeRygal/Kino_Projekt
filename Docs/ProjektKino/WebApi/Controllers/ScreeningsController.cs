@@ -45,5 +45,12 @@ namespace WebApi.Controllers
             return this.screeningService.GetTickets(id);
         }
 
+        [HttpGet]
+        [Route("getScreenings/")]
+        public IEnumerable<ScreeningResponseDTO> GetScreenings()
+        {
+            return this.screeningService.GetScreenings();
+        }
+
     }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Screening } from '../model/screening';
+import { ScreaningsService } from '../screanings.service';
 
 @Component({
   selector: 'app-home',

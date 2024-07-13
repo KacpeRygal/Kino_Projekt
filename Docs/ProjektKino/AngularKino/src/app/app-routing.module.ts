@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: 'profil',component: ProfilComponent},
-  {path: 'movie',component:MovieComponent},
+  {path: 'movie/:id',component:MovieComponent},
   {path: 'seats',component:SeatsComponent},
   {path: 'log-reg',component:LogRegComponent},
   {path: 'home',component:HomeComponent},

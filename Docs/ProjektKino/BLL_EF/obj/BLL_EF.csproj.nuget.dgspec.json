@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj": {}
+    "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj": {}
   },
   "projects": {
-    "D:\\ProjektKino\\Docs\\ProjektKino\\BLL\\BLL.csproj": {
+    "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\Mikołaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\K\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mikołaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\DAL.csproj"
+              "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\DAL\\DAL.csproj"
               }
             }
           }
@@ -69,25 +64,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj": {
+    "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj",
+        "projectUniqueName": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj",
         "projectName": "BLL_EF",
-        "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj",
-        "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\obj\\",
+        "projectPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj",
+        "packagesPath": "C:\\Users\\Mikołaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL_EF\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\K\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mikołaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,15 +86,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ProjektKino\\Docs\\ProjektKino\\BLL\\BLL.csproj": {
-                "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL\\BLL.csproj"
+              "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\BLL\\BLL.csproj"
               }
             }
           }
@@ -138,25 +128,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\DAL.csproj": {
+    "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Mikołaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\K\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mikołaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -164,15 +150,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Model.csproj": {
-                "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Model.csproj"
+              "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Model.csproj"
               }
             }
           }
@@ -225,25 +210,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Model.csproj": {
+    "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\obj\\",
+        "projectPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\Mikołaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mikołaj\\Desktop\\Kino_Projekt\\Docs\\ProjektKino\\Model\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\K\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mikołaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -251,7 +232,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -296,7 +276,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

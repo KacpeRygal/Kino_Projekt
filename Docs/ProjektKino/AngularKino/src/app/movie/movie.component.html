@@ -1,1 +1,23 @@
-<p>movie works!</p>
+<div>
+    {{movie.at(0)?.id}}
+    {{movie.at(0)?.language}}
+    {{movie.at(0)?.name}}
+    {{movie.at(0)?.score}}
+    {{movie.at(0)?.time}}
+</div>
+<table [border]="1">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Opinia</th>
+            <th>Ocena</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr 
+            *ngFor="let s of opinions" 
+            [app-opinion-row]="s"
+            >
+        </tr>
+    </tbody>
+</table>

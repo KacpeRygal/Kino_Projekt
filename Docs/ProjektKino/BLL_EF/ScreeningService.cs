@@ -37,6 +37,23 @@ namespace BLL_EF
             return response;
         }
 
+        public IEnumerable<ScreeningResponseDTO> GetScreenings() 
+        {
+            var screens = dbContext.Screening;
+            for (int i = 0; i < screens.Count(); i++)
+            {
+                Screening sc = screens.ElementAt(i);
+                ScreeningResponseDTO r = new ScreeningResponseDTO
+                {
+                    ID = sc.ID,  
+                    MovieID = sc.MovieID,
+                    HallID = sc.HallID,
+                    Date = sc.Date,
+                };
+                yield return r;
+            }
+        }
+
         public void PostScreening(ScreeningRequestDTO screeningRequestDTO)
         {
             Screening screening = new()

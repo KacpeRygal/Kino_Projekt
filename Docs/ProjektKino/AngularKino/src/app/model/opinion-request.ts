@@ -1,5 +1,5 @@
 export interface OpinionRequest {
-    uerId:number;
+    userId:number;
     movieId:number;
     value:number;
     content:string;

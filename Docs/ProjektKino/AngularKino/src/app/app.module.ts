@@ -9,6 +9,8 @@ import { LogRegComponent } from './log-reg/log-reg.component';
 import { MovieComponent } from './movie/movie.component';
 import { SeatsComponent } from './seats/seats.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { OpinionRowComponent } from './opinion-row/opinion-row.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { FormsModule } from '@angular/forms';
     ProfilComponent,
     LogRegComponent,
     MovieComponent,
-    SeatsComponent
+    SeatsComponent,
+    OpinionRowComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

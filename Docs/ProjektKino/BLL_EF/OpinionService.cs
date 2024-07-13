@@ -4,6 +4,7 @@ using DAL;
 using Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -49,6 +50,13 @@ namespace BLL_EF
                 Value = opinionRequestDTO.Value
             };
             dbContext.Opinion.Add(opinion);
+            //update score//not working
+            Movie movie = dbContext.Movie.Find(opinion.MovieID);
+            int n = dbContext.Opinion.Where(x => x.MovieID == opinion.MovieID).Count();
+            if (n == 0) n = 1;
+            int prevValue = dbContext.Movie.Find(opinion.MovieID).Score;
+            int nextValue = (prevValue + opinion.Value) / n;
+            dbContext.Movie.Find(opinion.MovieID).Score = nextValue;
             dbContext.SaveChanges();
         }
 
