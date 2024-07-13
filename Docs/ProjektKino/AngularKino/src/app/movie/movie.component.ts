@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MoviesService } from '../movies.service';
 import { Movie } from '../model/movie';
 import { Opinion } from '../model/opinion';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie',
@@ -13,7 +13,7 @@ export class MovieComponent {
   public movie: Movie[]=[]
   public opinions: Opinion[]=[]
 
-  constructor(private moviesService: MoviesService, private route: ActivatedRoute){
+  constructor(private moviesService: MoviesService, private route: ActivatedRoute,private router: Router){
     let id: number =  (Number(this.route.snapshot.paramMap.get('id')))
     console.log(id)
     this.getMovie(id)
@@ -42,6 +42,10 @@ export class MovieComponent {
       complete: () => console.log('complete')
     })
     console.log(this.opinions);
+  }
+
+  navigate() {
+    this.router.navigate(['/home'])
   }
 
 }
