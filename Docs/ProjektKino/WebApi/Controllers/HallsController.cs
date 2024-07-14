@@ -32,7 +32,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("getHall/{id}")]
-        public HallResponseDTO GetHall([FromQuery] int id)
+        public HallResponseDTO GetHall(int id)
         {
             return this.hallService.GetHall(id);
         }

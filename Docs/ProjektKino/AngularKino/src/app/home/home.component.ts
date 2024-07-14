@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
     if (this.isLoggedIn) {
       this.router.navigate(['/profile']);
     } else {
-      this.router.navigate(['/log-reg']);
+      this.router.navigate(['/logreg']);
     }
   }
 

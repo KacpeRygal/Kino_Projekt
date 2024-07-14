@@ -4,5 +4,5 @@ export interface Screening {
     id:number;
     hallid:number;
     movieid:number;
-    date:DatePipe;
+    date:string;
 }

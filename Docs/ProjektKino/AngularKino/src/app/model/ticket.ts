@@ -5,5 +5,5 @@ export interface Ticket {
     userId:number;
     screeningId:number;
     price:number;
-    date:DatePipe;
+    date:string;
 }

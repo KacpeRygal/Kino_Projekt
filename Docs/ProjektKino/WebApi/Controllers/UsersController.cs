@@ -32,21 +32,29 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("get1/{id}")]
-        public UserResponseDTO GetUser([FromQuery] int id)
+        [Route("Users")]
+        public IEnumerable<UserResponseDTO> GetUsers()
+        {
+            return this.userService.GetUsers();
+        }
+
+
+        [HttpGet]
+        [Route("User/{id}")]
+        public UserResponseDTO GetUser(int id)
         {
             return this.userService.GetUser(id);
         }
 
         [HttpGet]
-        [Route("getTickets/{id}")]
+        [Route("Tickets/{id}")]
         public IEnumerable<TicketResponseDTO> GetTickets(int id)
         {
             return this.userService.GetTickets(id);
         }
 
         [HttpGet]
-        [Route("getOpinions/{id}")]
+        [Route("Opinions/{id}")]
         public IEnumerable<OpinionResponseDTO> GetOpinions(int id)
         {
             return this.userService.GetOpinions(id);

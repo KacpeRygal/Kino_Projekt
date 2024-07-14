@@ -14,7 +14,7 @@ namespace BLL
         void DeleteUser(int id);
         void PutUser(int id, UserRequestDTO userRequestDTO);
         void PostUser(UserRequestDTO userRequestDTO);
-
+        public IEnumerable<UserResponseDTO> GetUsers();
         IEnumerable<TicketResponseDTO> GetTickets(int id);
         public IEnumerable<OpinionResponseDTO> GetOpinions(int id);
     }

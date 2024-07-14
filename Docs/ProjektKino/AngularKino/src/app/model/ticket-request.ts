@@ -4,5 +4,5 @@ export interface TicketRequest {
     userId:number;
     screeningId:number;
     price:number;
-    date:DatePipe;
+    date:string;
 }
