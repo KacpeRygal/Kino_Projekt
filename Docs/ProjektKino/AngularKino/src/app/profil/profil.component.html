@@ -18,19 +18,20 @@
     <button (click)="showTickets()" [class.active]="activeTab === 'tickets'">Tickets</button>
   </div>
   <div class="content" *ngIf="activeTab === 'opinions'">
-    <div class="opinion" *ngFor="let opinion of opinions">
-     <h3> <!--{{ opinion.movieName }}--></h3>
+    <div class="opinion" *ngFor="let opinion of profilOpinions">
+     <h3> {{ opinion.movieName }}</h3>
       <p> {{ opinion.content }}</p>
       <p><strong>Rating:</strong>{{ opinion.value }}</p>
     </div>
   </div>
   <div class="content" *ngIf="activeTab === 'tickets'">
     <div class="ticket" *ngFor="let ticket of profilTickets">
-      <h3>Ticket nr {{ticket.id}} </h3>
-      <p><strong>Price:</strong>{{ ticket.price }} zł</p>
-      <p><strong>Showtime:</strong> {{ ticket.screeningData }}</p>
+      <h3>Ticket nr {{ticket.id}}</h3> 
+      <p><strong>Movie name: </strong>{{ticket.movieName}}</p>
+      <p><strong>Price: </strong>{{ ticket.price }} zł</p>
+      <p><strong>Showtime: </strong> {{ ticket.screeningData }}</p>
       <p><strong>Date: {{ticket.data}}</strong></p>
-      <p><strong>Hall number:</strong> {{ ticket.hallNumber }}</p>
+      <p><strong>Hall number:</strong> {{ ticket.hallNumber }}         <strong>Seat:</strong> col:{{ticket.seatCollumn}} row:{{ticket.seatRow}}  </p>
     </div> 
   </div>
 </div>

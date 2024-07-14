@@ -1,7 +1,7 @@
 export interface Opinion {
     id:number;
     userId:number;
-    movieId:number;
+    movieID:number;
     value:number;
     content:string;
 }

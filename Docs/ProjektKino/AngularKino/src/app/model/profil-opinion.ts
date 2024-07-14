@@ -1,6 +1,5 @@
-export interface ProfilOpinion {
-    userName:string;
-    movieName:string;
-    value:number;
-    content:string;
+export class ProfilOpinion {
+    movieName:string='';
+    value:number=0;
+    content:string='';
 }
