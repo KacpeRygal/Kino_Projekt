@@ -2,7 +2,7 @@ import { DatePipe } from "@angular/common";
 
 export interface Movie {
     id:number;
-    time:DatePipe;
+    time:string;
     language:string;
     score:number;
     name:string;

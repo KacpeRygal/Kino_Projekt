@@ -59,8 +59,7 @@ export class HomeComponent implements OnInit {
     let sc:Screening[]=[]
     let checkedDate: Date = this.pagesDates[page]
     this.screenings.forEach(item=>{
-      let stringDate: string = item.date
-      let date: Date = new Date(stringDate)
+      let date: Date = new Date(item.date.toString())
       if(date.getDay() == checkedDate.getDay() && date.getMonth() == checkedDate.getMonth() && date.getFullYear() == checkedDate.getFullYear()) {
         sc.push(item)
       }

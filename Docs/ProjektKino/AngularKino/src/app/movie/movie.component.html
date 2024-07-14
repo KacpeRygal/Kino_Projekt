@@ -1,25 +1,22 @@
 <div class="container">
     <button class="nav-button" (click)="navigate()">Home</button>
-    <h1>{{movie.at(0)?.name}}</h1>
-    {{movie.at(0)?.language}}
-    {{movie.at(0)?.score}}
-    {{movie.at(0)?.time}}
+    <div class="field">
+        <h1>{{movie.at(0)?.name}}</h1>
+        <div class="field">
+        <p>
+            {{movie.at(0)?.language}} | {{movie.at(0)?.time}}
+        </p>
+        <p>Oceniony na: {{movie.at(0)?.score}}</p>
+        </div>
+    </div>
 </div>
 <div class="container">
-    <table [border]="1">
-        <thead>
-            <tr>
-                <th>User</th>
-                <th>Opinia</th>
-                <th>Ocena</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr 
-                *ngFor="let s of opinions" 
-                [app-opinion-row]="s"
-                >
-            </tr>
-        </tbody>
-    </table>
+    <div class="field">
+        Dodaj opinie
+    </div>
+</div>
+<div class="container">
+    <div class="fields">
+        <div *ngFor="let s of opinions" [app-opinion-row]="s" class="field"></div>
+    </div>
 </div>

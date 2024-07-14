@@ -17,6 +17,7 @@ export class ScreeningRowComponent implements OnInit{
 
   @Input('app-screening-row') screening!: Screening;
   date: Date = new Date(Date.now()-200)
+  dateString: string = ''
   name: string = ''
   id: number = NaN
 
@@ -33,6 +34,8 @@ export class ScreeningRowComponent implements OnInit{
         this.name = res.name
       }
     })
+    this.date = new Date(this.screening.date)
+    this.dateString = this.date.getHours()+":"+this.date.getMinutes()
   }
 
   movieDetails(id:number):void{
