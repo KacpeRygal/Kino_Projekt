@@ -27,7 +27,7 @@ namespace Model
         [Column("Occupied")]
         public bool Occupied { get; set; }
         [ForeignKey(nameof(HallID))]
-        public Hall Hall { get; set; }
+        public Hall ?Hall { get; set; }
         [ForeignKey(nameof(TicketID))]
         public Ticket ?Ticket { get; set; }
 

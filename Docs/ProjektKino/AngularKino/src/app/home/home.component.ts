@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setPage(1);
+    this.setPage(0);
   }
 
   navigate() {
@@ -57,9 +57,14 @@ export class HomeComponent implements OnInit {
 
   setPage(page: number) {
     let sc:Screening[]=[]
+    let checkedDate: Date = this.pagesDates[page]
     this.screenings.forEach(item=>{
-
+      let stringDate: string = item.date
+      let date: Date = new Date(stringDate)
+      if(date.getDay() == checkedDate.getDay() && date.getMonth() == checkedDate.getMonth() && date.getFullYear() == checkedDate.getFullYear()) {
+        sc.push(item)
+      }
     })
-    this.currentScreenings = this.screenings
+    this.currentScreenings = sc
   }
 }
