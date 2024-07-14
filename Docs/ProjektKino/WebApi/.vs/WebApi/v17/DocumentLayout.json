@@ -3,67 +3,29 @@
   "WorkspaceRootPath": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Halls.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|d:\\projektkino\\docs\\projektkino\\model\\opinion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|d:\\projektkino\\docs\\projektkino\\webapi\\controllers\\hallscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\hallscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|d:\\projektkino\\docs\\projektkino\\model\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5EB6DAD-D54D-42FD-9956-90A7EF5983D2}|..\\BLL_EF\\BLL_EF.csproj|d:\\projektkino\\docs\\projektkino\\bll_ef\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|d:\\projektkino\\docs\\projektkino\\model\\screening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|d:\\projektkino\\docs\\projektkino\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|d:\\projektkino\\docs\\projektkino\\model\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|d:\\projektkino\\docs\\projektkino\\webapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|d:\\projektkino\\docs\\projektkino\\model\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|d:\\projektkino\\docs\\projektkino\\webapi\\controllers\\opinionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\opinionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{829C9F9D-8E6E-415C-9016-7E03A3F94A43}|..\\BLL\\BLL.csproj|d:\\projektkino\\docs\\projektkino\\bll\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5EB6DAD-D54D-42FD-9956-90A7EF5983D2}|..\\BLL_EF\\BLL_EF.csproj|d:\\projektkino\\docs\\projektkino\\bll_ef\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|d:\\projektkino\\docs\\projektkino\\model\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5EB6DAD-D54D-42FD-9956-90A7EF5983D2}|..\\BLL_EF\\BLL_EF.csproj|d:\\projektkino\\docs\\projektkino\\bll_ef\\screeningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5EB6DAD-D54D-42FD-9956-90A7EF5983D2}|..\\BLL_EF\\BLL_EF.csproj|d:\\projektkino\\docs\\projektkino\\bll_ef\\opinionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|d:\\projektkino\\docs\\projektkino\\webapi\\controllers\\seatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\seatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Screening.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|d:\\projektkino\\docs\\projektkino\\webapi\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEAA5175-D10D-4576-B8D4-17A8EF7033D9}|WebApi.csproj|solutionrelative:controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Opinion.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Ticket.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Screening.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4450F5-AF9D-4498-A0F9-0B1054B5F685}|..\\Model\\Model.csproj|d:\\projektkino\\docs\\projektkino\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Movie.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.User.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -73,235 +35,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HallsController.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\HallsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HallsController.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\HallsController.cs",
-              "RelativeToolTip": "Controllers\\HallsController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowCIAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T05:55:58.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MoviesController.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\MoviesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MoviesController.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\MoviesController.cs",
-              "RelativeToolTip": "Controllers\\MoviesController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowBcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T05:03:14.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL\\IUserService.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\IUserService.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL\\IUserService.cs",
-              "RelativeToolTip": "..\\BLL\\IUserService.cs",
+              "Title": "Seat.cs",
+              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Seat.cs",
+              "RelativeDocumentMoniker": "..\\Model\\Seat.cs",
+              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Seat.cs",
+              "RelativeToolTip": "..\\Model\\Seat.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T04:53:10.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TicketService.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\TicketService.cs",
-              "RelativeDocumentMoniker": "..\\BLL_EF\\TicketService.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\TicketService.cs",
-              "RelativeToolTip": "..\\BLL_EF\\TicketService.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAIwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T04:52:42.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Ticket.cs",
-              "RelativeDocumentMoniker": "..\\Model\\Ticket.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Ticket.cs",
-              "RelativeToolTip": "..\\Model\\Ticket.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T04:52:35.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\UserService.cs",
-              "RelativeDocumentMoniker": "..\\BLL_EF\\UserService.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\UserService.cs",
-              "RelativeToolTip": "..\\BLL_EF\\UserService.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAmwGEAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T04:52:30.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ScreeningService.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\ScreeningService.cs",
-              "RelativeDocumentMoniker": "..\\BLL_EF\\ScreeningService.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\ScreeningService.cs",
-              "RelativeToolTip": "..\\BLL_EF\\ScreeningService.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAwwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T04:52:27.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OpinionsController.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\OpinionsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OpinionsController.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\OpinionsController.cs",
-              "RelativeToolTip": "Controllers\\OpinionsController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowCYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T04:51:10.977Z",
+              "WhenOpened": "2024-07-14T14:09:35.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.Halls [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Halls.sql",
-              "ToolTip": "dbo.Halls [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-14T00:50:27.252Z",
+              "Title": "Opinion.cs",
+              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Opinion.cs",
+              "RelativeDocumentMoniker": "..\\Model\\Opinion.cs",
+              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Opinion.cs",
+              "RelativeToolTip": "..\\Model\\Opinion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T14:09:33.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "OpinionService.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\OpinionService.cs",
-              "RelativeDocumentMoniker": "..\\BLL_EF\\OpinionService.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\OpinionService.cs",
-              "RelativeToolTip": "..\\BLL_EF\\OpinionService.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Register.cs",
+              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Register.cs",
+              "RelativeDocumentMoniker": "..\\Model\\Register.cs",
+              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Register.cs",
+              "RelativeToolTip": "..\\Model\\Register.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T04:52:18.653Z",
+              "WhenOpened": "2024-07-14T14:09:32.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Screening.cs",
+              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Screening.cs",
+              "RelativeDocumentMoniker": "..\\Model\\Screening.cs",
+              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Screening.cs",
+              "RelativeToolTip": "..\\Model\\Screening.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T14:08:57.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.Screening [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Screening.sql",
+              "ToolTip": "dbo.Screening [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-07-14T14:04:05.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAADcAAAARAAAA",
+              "Title": "Movie.cs",
+              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Movie.cs",
+              "RelativeDocumentMoniker": "..\\Model\\Movie.cs",
+              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Movie.cs",
+              "RelativeToolTip": "..\\Model\\Movie.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T23:52:58.334Z",
+              "WhenOpened": "2024-07-14T14:02:09.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SeatsController.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\SeatsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SeatsController.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\SeatsController.cs",
-              "RelativeToolTip": "Controllers\\SeatsController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T04:51:57.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "dbo.Opinion [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Opinion.sql",
-              "ToolTip": "dbo.Opinion [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-14T04:48:45.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "dbo.Ticket [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Ticket.sql",
-              "ToolTip": "dbo.Ticket [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-14T01:08:31.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\User.cs",
-              "RelativeDocumentMoniker": "..\\Model\\User.cs",
-              "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\User.cs",
-              "RelativeToolTip": "..\\Model\\User.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T00:55:46.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "dbo.Screening [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Screening.sql",
-              "ToolTip": "dbo.Screening [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-14T00:50:54.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "dbo.Movie [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Movie.sql",
-              "ToolTip": "dbo.Movie [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-14T00:49:56.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "TicketsController.cs",
               "DocumentMoniker": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\TicketsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TicketsController.cs",
               "ToolTip": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\Controllers\\TicketsController.cs",
               "RelativeToolTip": "Controllers\\TicketsController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowAAAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T23:52:51.393Z",
+              "WhenOpened": "2024-07-14T13:50:02.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "dbo.User [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.User.sql",
-              "ToolTip": "dbo.User [Data]",
+              "DocumentIndex": 7,
+              "Title": "dbo.Ticket [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/test1/True/SqlTable/dbo.Ticket.sql",
+              "ToolTip": "dbo.Ticket [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-14T00:27:10.763Z",
+              "WhenOpened": "2024-07-14T13:49:10.866Z",
               "EditorCaption": ""
             }
           ]

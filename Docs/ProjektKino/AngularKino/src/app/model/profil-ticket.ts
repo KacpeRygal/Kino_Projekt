@@ -1,10 +1,10 @@
-export interface ProfilTicket {
-    id:number;
-    movieName:string;
-    screeningData:string;
-    data:string;
-    hallNumber:number;
-    seatRow:number;
-    seatCollumn:number;
-    price:number;
+export class ProfilTicket {
+    id: number = 0;
+    data: string = '';
+    price: number = 0;
+    movieName: string = '';
+    screeningData: string = '';
+    hallNumber: number = 0;
+    seatRow: number = 0;
+    seatCollumn: number = 0;
 }

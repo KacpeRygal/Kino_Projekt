@@ -18,6 +18,7 @@ import { ProfilOpinion } from '../model/profil-opinion';
 import { tick } from '@angular/core/testing';
 import { Hall } from '../model/hall';
 import { HallsService } from '../halls.service';
+import { forkJoin } from 'rxjs';
 
 
 @Component({
@@ -43,10 +44,10 @@ private readonly apiToken = inject(TokenService);
   profilOpinions:ProfilOpinion[]=[];
 
   instProfilOpinion!: ProfilOpinion;
-  instProfilTicket!: ProfilTicket;
+  instProfilTicket: ProfilTicket = new ProfilTicket()
 
   screeningTemp: Screening | undefined;
-  movieTemp: Screening | undefined;
+  movieTemp: Movie | undefined;
   hallTemp:Hall|undefined;
   opinionTemp:Opinion|undefined;
 
@@ -58,10 +59,15 @@ private readonly apiToken = inject(TokenService);
   ngOnInit(): void {
     if(this.apiToken.getToken()=="") this.router.navigateByUrl("logreg");
     this.getCurrentUser();
-   
+    console.log(this.tickets.length);
+       //  this.getScreenings();
+      //   this.getMovies();
+     //   this.getHalls();
+      //   this.combine();
   }
 
   getUzytkownikTypText(rodzaj: UserTypeEnum): string {
+    
     switch (rodzaj) {
       case UserTypeEnum.Admin:
         return 'Admin';
@@ -72,6 +78,7 @@ private readonly apiToken = inject(TokenService);
       default:
         return 'Brak';
     }
+
   }
 
   getCurrentUser() {
@@ -84,12 +91,13 @@ private readonly apiToken = inject(TokenService);
           this.user = res;
           this.app.user=res;
           this.getUserOpinion();
-          this.getUserTickets();
+          //this.getUserTickets();
 
-          this.getScreenings();
-          this.getMovies();
-          this.getHalls();
-          this.combine();
+         // this.getUserData();
+         // this.getScreenings();
+         // this.getMovies();
+         // this.getHalls();
+         // this.combine();
    
         },
         error: (err) => console.log('Error fetching logged user: ', err)
@@ -97,90 +105,103 @@ private readonly apiToken = inject(TokenService);
     }
   }
 
-
+  getUserOpinion() {
+    console.log(this.apiToken.decodedToken);
+    this.userService.getOpinions(this.currentUserID).subscribe({
+      next: (res) => {
+        this.opinions = res;
+        this.getUserTickets();
+      },
+      error: (err) => console.log('Error fetching users opinions : ', err)
+    });
+  }
 
   getUserTickets() {
     console.log(this.apiToken.decodedToken);
     this.userService.getTickets(this.currentUserID).subscribe({
       next: (res) => {
-        console.log(res.length);
         this.tickets = res;
+        this.getScreenings();
       },
       error: (err) => console.log('Error fetching users tickets : ', err)
     });
   }
   
   getScreenings(){
-    this.tickets.forEach(ticket=>
-      this.screeningService.getScreening(ticket.screeningId).subscribe({
+
+    this.tickets.map(ticket=>
+      this.screeningService.getScreening(ticket.screeningID).subscribe({
         next: (res) => {
-          console.log(res.date);
+
            this.screenings.push(res);
+           this.getMovies();
         },
         error: (err) => console.log('Error fetching screening: ', err)
       })
-    )
+    );
   }
 
   getMovies(){
-    this.screenings.forEach(screening=>
-      this.movieService.getMovie(screening.movieid).subscribe({
+
+    this.screenings.map(screening=>
+      this.movieService.getMovie(screening.movieID).subscribe({
         next: (res) => {
            this.movies.push(res);
+           this.getHalls();
         },
         error: (err) => console.log('Error fetching screening: ', err)
       })
-    )
+    );
   }
 
   getHalls() {
-    this.screenings.forEach(screening=>
-      this.hallService.getHall(screening.hallid).subscribe({
+    this.screenings.map(screening=>
+      this.hallService.getHall(screening.hallID).subscribe({
         next: (res) => {
+          console.log('hhaa');
            this.halls.push(res);
+           this.combine();
         },
         error: (err) => console.log('Error fetching screening: ', err)
       })
-    )
+    );
   }
   combine(){
     this.tickets.forEach(ticket=>
     {
-      const screeningTemp=this.screenings.find(x=>x.id==ticket.screeningId);
-      if(screeningTemp){
-      const movieTemp=screeningTemp ? this.movies.find(x=>x.id==this.screeningTemp?.movieid):undefined;
-        if(movieTemp){
-       const hallTemp=screeningTemp ? this.halls.find(x=>x.id==this.screeningTemp?.hallid):undefined;
-          if(hallTemp){
+      if(this.tickets.length!=this.profilTickets.length){
+      console.log("tickety test dlugosc: "+this.tickets.length);
+       this.screeningTemp=this.screenings.find(x=>x.id==ticket.screeningID);
+      if(this.screeningTemp){
+        console.log('data screeninig: '+this.screeningTemp?.date);
+       this.movieTemp=this.screeningTemp ? this.movies.find(x=>x.id==this.screeningTemp?.movieID):undefined;
+       console.log("                      test:movie");
+       console.log(this.movieTemp?.id);
+        if(this.movieTemp){
+          console.log("                      test");
+       this.hallTemp=this.screeningTemp ? this.halls.find(x=>x.id==this.screeningTemp?.hallID):undefined;
+       console.log('halltemp collumn: '+this.hallTemp?.columns);
+          if(this.hallTemp){
+
             this.instProfilTicket.id=ticket.id;
             this.instProfilTicket.data=ticket.date;
             this.instProfilTicket.price=ticket.price;
-            this.instProfilTicket.movieName=movieTemp.name;
-            this.instProfilTicket.screeningData=screeningTemp.date;
-            this.instProfilTicket.hallNumber=hallTemp.id;
-            this.instProfilTicket.seatRow=hallTemp.rows;                                                                //tu będzie położenie siedzienia
-            this.instProfilTicket.seatCollumn=hallTemp.columns;
+            this.instProfilTicket.movieName=this.movieTemp.name;
+            this.instProfilTicket.screeningData=this.screeningTemp.date;
+            this.instProfilTicket.hallNumber=this.hallTemp.id;
+            this.instProfilTicket.seatRow=this.hallTemp.rows;                                                                //tu będzie położenie siedzienia
+            this.instProfilTicket.seatCollumn=this.hallTemp.columns;
 
             this.profilTickets.push(this.instProfilTicket);
           }
         }
+        }
       }
     }
     )
-
-
-
+    console.log('glugosc ticketow: '+this.profilTickets.length);
+  }
     
-  }
-  getUserOpinion() {
-    console.log(this.apiToken.decodedToken);
-    this.userService.getOpinions(this.currentUserID).subscribe({
-      next: (res) => {
-        this.opinions = res;
-      },
-      error: (err) => console.log('Error fetching users opinions : ', err)
-    });
-  }
 
   showOpinions() {
     this.activeTab = 'opinions';
