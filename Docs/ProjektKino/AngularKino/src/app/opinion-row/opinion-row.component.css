@@ -13,9 +13,19 @@
     text-align: center;
   }
 
+  .field-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width:100px;
+    overflow-wrap: break-word;
+  }
+
   .fields {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     width: 100%;
     max-width: 600px;

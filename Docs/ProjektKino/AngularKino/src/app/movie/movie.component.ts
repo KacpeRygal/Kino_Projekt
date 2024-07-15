@@ -10,6 +10,7 @@ import { AppComponent } from '../app.component';
 import { OpinionsService } from '../opinions.service';
 import { OpinionRequest } from '../model/opinion-request';
 import { min } from 'rxjs';
+import { __makeTemplateObject } from 'tslib';
 
 @Component({
   selector: 'app-movie',
@@ -19,26 +20,27 @@ import { min } from 'rxjs';
 export class MovieComponent implements OnInit{
   public movie: Movie[]=[]
   public movieTime: string =''
+  public movieScore:number = NaN
+
   public movieId: number = -1000
   public opinions: Opinion[]=[]
   private readonly apiToken = inject(TokenService);
   currentUserID: number = -1000;
   user!: User;
-
   constructor(private moviesService: MoviesService, private route: ActivatedRoute, private router: Router,
               private userService: UsersService, private app: AppComponent, private opinionsService: OpinionsService) {
     let id: number =  (Number(this.route.snapshot.paramMap.get('id')))
     console.log(id)
-    this.getMovie(id)
-    this.getOpinions(id)
+    this.getMovieWithOpinions(id)
   }
 
   ngOnInit(): void {
     this.getCurrentUser()
   }
 
-  private getMovie(id: number):void{
+  private getMovieWithOpinions(id: number):void{
     this.movie = []
+    this.movieScore = NaN
     this.movieTime = ''
     this.moviesService.getMovie(id).subscribe({
       next: (res)=>{
@@ -47,20 +49,21 @@ export class MovieComponent implements OnInit{
         let date: Date = new Date(res.time)
         let minutes:number = date.getHours() * 60 + date.getMinutes()
         this.movieTime += minutes + " min"
+        this.movieScore = res.score
       },
       error: (err) => console.error(err),
       complete: () => console.log('complete')
     })
     console.log(this.movie)
-  }
 
-  private getOpinions(id: number):void{
     this.opinions = []
     this.moviesService.getOpinions(id).subscribe({
       next: (res)=>{
         res.forEach(item=>{
           this.opinions.push(item)
         })
+        this.movieScore /= res.length
+        this.movieScore = (Number)(this.movieScore.toPrecision(2))
       },
       error: (err) => console.error(err),
       complete: () => console.log('complete')
@@ -85,15 +88,18 @@ export class MovieComponent implements OnInit{
     }
   }
 
-  addOpinion(){
-    let opinion: OpinionRequest = { content: null, movieId: null, userId: null, value: null }
-    opinion.content = "nowa opinia"
-    opinion.movieId = this.movieId
-    opinion.value = 123123
-    opinion.userId = this.currentUserID
-    this.opinionsService.post(opinion).subscribe()
-    this.getOpinions(this.movieId)
-    this.getMovie(this.movieId)
+  public opinionToAdd: OpinionRequest = {
+    content: null,
+    movieId: null,
+    userId: null,
+    value: null
+  };
+
+  onSubmit(event: any): void{
+    this.opinionToAdd.movieId = this.movieId
+    this.opinionToAdd.userId = this.currentUserID
+    this.opinionsService.post(this.opinionToAdd).subscribe()
+    this.getMovieWithOpinions(this.movieId)
   }
 
 }
