@@ -4,7 +4,7 @@
         <h1>{{movie.at(0)?.name}}</h1>
         <div class="field">
         <p>
-            {{movie.at(0)?.language}} | {{movie.at(0)?.time}}
+            {{movie.at(0)?.language}} | {{movieTime}}
         </p>
         <p>Oceniony na: {{movie.at(0)?.score}}</p>
         </div>
@@ -12,7 +12,7 @@
 </div>
 <div class="container">
     <div class="field">
-        Dodaj opinie
+        <button (click)='addOpinion()'>Dodaj opinie</button>
     </div>
 </div>
 <div class="container">

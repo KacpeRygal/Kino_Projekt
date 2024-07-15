@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Screening } from '../model/screening';
 import { Input } from '@angular/core';
-import { ScreaningsService } from '../screanings.service';
+import { ScreeningsService } from '../screenings.service';
 import { MoviesService } from '../movies.service';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';

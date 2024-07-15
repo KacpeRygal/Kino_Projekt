@@ -1,15 +1,40 @@
-<div class="login-container">
-    <h2>Login</h2>
-    <form (ngSubmit)="login()">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" [(ngModel)]="username" name="username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" [(ngModel)]="password" name="password" required>
-      </div>
-      <button type="submit">Login</button>
-    </form>
+<div class="container">
+  <div class="auth-forms">
+    <div class="login-form">
+      <h2>Login</h2>
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <div class="form-group">
+          <label for="login">Login</label>
+          <input type="text" id="login" ngModel class="form-control" name="login" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password"ngModel class="form-control" name="password" required>
+        </div>
+        <button type="submit" class="auth-button">Login</button>
+      </form>
+    </div>
+    <div class="register-form">
+      <h2>Register</h2>
+      <form (ngSubmit)="register()">
+        <div class="form-group">
+          <label for="login">Login</label>
+          <input type="text" id="login" [(ngModel)]="registerData.login" name="login" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="name" id="name" [(ngModel)]="registerData.name"  name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" [(ngModel)]="registerData.password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="repeat-password">Repeat password</label>
+          <input type="password" id="repeat-password" [(ngModel)]="registerData.repeatPassword" name="repeatPassword" required>
+        </div>
+        <button type="submit" class="auth-button">Register</button>
+      </form>
+    </div>
   </div>
-  
+</div>

@@ -5,12 +5,13 @@ import { MovieComponent } from './movie/movie.component';
 import { SeatsComponent } from './seats/seats.component';
 import { LogRegComponent } from './log-reg/log-reg.component';
 import { HomeComponent } from './home/home.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path: 'profil',component: ProfilComponent},
   {path: 'movie/:id',component:MovieComponent},
+  {path: 'profil', component: ProfilComponent, canActivate: [authGuard] },
   {path: 'seats',component:SeatsComponent},
-  {path: 'log-reg',component:LogRegComponent},
+  {path: 'logreg',component:LogRegComponent},
   {path: 'home',component:HomeComponent},
   {path:'',redirectTo:'home',pathMatch: 'full'}
 ];

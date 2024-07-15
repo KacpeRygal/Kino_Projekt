@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Screening } from '../model/screening';
-import { ScreaningsService } from '../screanings.service';
+import { ScreeningsService } from '../screenings.service';
 import { MoviesService } from '../movies.service';
 import { Movie } from '../model/movie';
 import { ScreeningRowComponent } from '../screening-row/screening-row.component';
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   pagesDates: Date[] = []
   currentPageIndex: number = 0
   
-  constructor(private router: Router, private screeningService: ScreaningsService,private moviesService: MoviesService) {
+  constructor(private router: Router, private screeningService: ScreeningsService,private moviesService: MoviesService) {
       this.getData()
 
       for (let i = 0; i < 5; i++) {
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
     if (this.isLoggedIn) {
       this.router.navigate(['/profile']);
     } else {
-      this.router.navigate(['/log-reg']);
+      this.router.navigate(['/logreg']);
     }
   }
 
