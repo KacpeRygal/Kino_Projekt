@@ -9,9 +9,14 @@ import { LogRegComponent } from './log-reg/log-reg.component';
 import { MovieComponent } from './movie/movie.component';
 import { SeatsComponent } from './seats/seats.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { OpinionRowComponent } from './opinion-row/opinion-row.component';
 import { ScreeningRowComponent } from './screening-row/screening-row.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { HttpClientModule } from '@angular/common/http';
+
+export function tokenGetter() {
+  return localStorage.getItem("jwt");
+}
 
 @NgModule({
   declarations: [
@@ -25,10 +30,16 @@ import { ScreeningRowComponent } from './screening-row/screening-row.component';
     ScreeningRowComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    FormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["localhost:7104"]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

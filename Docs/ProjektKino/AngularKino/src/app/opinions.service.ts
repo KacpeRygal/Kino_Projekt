@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 export class OpinionsService {
 
   constructor(private httpClient: HttpClient) { }
-
   public get(id: number){
     return this.httpClient.get<Opinion>('https://localhost:7204/api/Opinions/get1/'+id)
   }
@@ -22,9 +21,8 @@ export class OpinionsService {
   public post(body: OpinionRequest):Observable<void>{
     return this.httpClient.post<void>('https://localhost:7204/api/Opinions',body);
   }
-  
+
   public delete(id: number): Observable<void> {
     return this.httpClient.delete<void>('https://localhost:7204/api/Opinions/'+id);
   }
-
 }

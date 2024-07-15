@@ -57,6 +57,7 @@ namespace BLL_EF
         public void PutUser(int id, UserRequestDTO userRequestDTO)
         {
             User user = dbContext.User.Find(id);
+            if (user == null) return;
             user.Login = userRequestDTO.Login;
             user.Password = userRequestDTO.Password;
             user.Type = userRequestDTO.Type;
@@ -98,6 +99,26 @@ namespace BLL_EF
                     MovieID = sc.MovieID,
                     Value = sc.Value,
                     Content = sc.Content,
+                };
+                yield return response;
+            }
+        }
+
+        public IEnumerable<UserResponseDTO> GetUsers()
+        {
+            var users = dbContext.User;
+
+            for (int i = 0; i < users.Count(); i++)
+            {
+                User us = users.ElementAt(i);
+                UserResponseDTO response = new UserResponseDTO
+                {
+                    ID = us.ID,
+                    Login = us.Login,
+                    Password = us.Password,
+                    Type = us.Type,
+                    Name= us.Name,
+                    CanReduce= us.CanReduce,
                 };
                 yield return response;
             }

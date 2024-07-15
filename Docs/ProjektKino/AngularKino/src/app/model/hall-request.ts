@@ -1,7 +1,6 @@
 import { HallTechnologyEnum } from "./hall-technology-enum";
 
-export interface Hal {
-    id:number;
+export interface HallRequest {
     rows:number;
     columns:number;
     full:boolean;

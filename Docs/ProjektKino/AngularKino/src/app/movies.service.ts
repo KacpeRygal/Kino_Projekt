@@ -6,6 +6,7 @@ import { Movie } from './model/movie';
 import { Opinion } from './model/opinion';
 import { Screening } from './model/screening';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,13 +22,14 @@ export class MoviesService {
   public post(body: MovieRequest):Observable<void>{
     return this.httpClient.post<void>('https://localhost:7204/api/Movies',body);
   }
-  
+
   public delete(id: number): Observable<void> {
     return this.httpClient.delete<void>('https://localhost:7204/api/Movies/'+id);
   }
 
   public getMovie(id: number){
     return this.httpClient.get<Movie>('https://localhost:7204/api/Movies/get1/'+id)
+
   }
 
   public getMovies(){

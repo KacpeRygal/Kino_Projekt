@@ -1,6 +1,6 @@
 export interface Seat {
     id:number;
-    tickerId:number;
+    ticketId:number;
     hallId:number;
     row:number;
     column:number;
