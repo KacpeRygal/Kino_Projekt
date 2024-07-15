@@ -6,6 +6,7 @@ import { MoviesService } from '../movies.service';
 import { Movie } from '../model/movie';
 import { ScreeningRowComponent } from '../screening-row/screening-row.component';
 import { DatePipe } from '@angular/common';
+import { HallsService } from '../halls.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
   pagesDates: Date[] = []
   currentPageIndex: number = 0
   
-  constructor(private router: Router, private screeningService: ScreeningsService,private moviesService: MoviesService) {
+  constructor(private router: Router, private screeningService: ScreeningsService,private moviesService: MoviesService,private hallsService: HallsService) {
       this.getData()
 
       for (let i = 0; i < 5; i++) {

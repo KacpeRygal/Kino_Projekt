@@ -4,5 +4,5 @@ export interface HallRequest {
     rows:number;
     columns:number;
     full:boolean;
-    technologu:HallTechnologyEnum;
+    technology:HallTechnologyEnum;
 }

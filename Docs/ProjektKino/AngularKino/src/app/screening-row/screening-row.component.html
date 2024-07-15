@@ -1,4 +1,9 @@
-<td>{{dateString}}</td><br>
-<td><button (click)="movieDetails(id)">{{name}}</button></td>
-<td>{{screening.hallID}}</td><br>
-<td><button (click)="movieDetails(-1)">Kup bilet</button></td>
+<div class="field">
+    <h1>{{dateString}}</h1>
+    <h2>{{name}}</h2>
+    <td>{{getHallTypeText(hallType)}}</td>
+</div>
+<div class="field">
+    <td><button class="button" (click)="movieDetails(id)">Szczegóły</button></td>
+    <td><button class="button" (click)="buyticket(screening.id)">Kup bilet</button></td>
+</div>
