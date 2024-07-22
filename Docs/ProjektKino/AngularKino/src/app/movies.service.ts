@@ -29,7 +29,6 @@ export class MoviesService {
 
   public getMovie(id: number){
     return this.httpClient.get<Movie>('https://localhost:7204/api/Movies/get1/'+id)
-
   }
 
   public getMovies(){

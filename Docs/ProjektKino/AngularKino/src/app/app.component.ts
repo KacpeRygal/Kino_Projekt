@@ -41,7 +41,7 @@ export class AppComponent {
 
   LoggedName():string{
     if(this.isLoggedIn){
-      return "Witaj"+this.user.name;
+      return "Witaj "+this.user.name;
     }
       return "";
   }
@@ -53,8 +53,15 @@ export class AppComponent {
     this.router.navigate(["/logreg"]);
   }
 
-  navigate(){
-    this.title='Profil';
+
+  navHome(){
+    this.router.navigate(['home']);
+  }
+  navProfil(){
     this.router.navigate(['profil']);
   }
+  navLogReg(){
+    this.router.navigate(['logreg']);
+  }
+
 }

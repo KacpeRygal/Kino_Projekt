@@ -33,17 +33,13 @@ export class UsersService {
     return this.httpClient.get<User[]>('https://localhost:7204/api/Users/Users');
   }
 
-  public getUser(userId: number): Observable<User> {
-    return this.httpClient.get<User>(`https://localhost:7204/api/Users/User/${userId}`);
-  }
   public getTickets(id: number){
-    return this.httpClient.get<Ticket[]>(`https://localhost:7204/api/Users/Tickets/${userId}`);
+    return this.httpClient.get<Ticket[]>(`https://localhost:7204/api/Users/Tickets/${id}`);
 
   }
-
   public getScreenings(id: number){
     return this.httpClient.get<Screening[]>('https://localhost:7204/api/Users/getOpinions/'+id)
-
+  }
   public getOpinions(userId:number):Observable<Opinion[]> {
       return this.httpClient.get<Opinion[]>(`https://localhost:7204/api/Users/Opinions/${userId}`);
     }

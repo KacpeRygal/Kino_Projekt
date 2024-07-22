@@ -71,7 +71,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: auto; /* Added to push button to the bottom */
+    margin-top: auto;
   }
   
   .auth-button:hover {

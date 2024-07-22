@@ -44,8 +44,8 @@ private readonly apiToken = inject(TokenService);
   profilTickets:ProfilTicket[]=[];
   profilOpinions:ProfilOpinion[]=[];
 
-  instProfilOpinion: ProfilOpinion= new ProfilOpinion()
-  instProfilTicket: ProfilTicket = new ProfilTicket()
+  instProfilOpinion: ProfilOpinion|undefined;
+  instProfilTicket: ProfilTicket|undefined;
 
   screeningTemp: Screening | undefined;
   movieTemp: Movie | undefined;
@@ -131,7 +131,6 @@ private readonly apiToken = inject(TokenService);
   }
 
   getMovies(){
-
     this.screenings.map(screening=>
       this.movieService.getMovie(screening.movieID).subscribe({
         next: (res) => {
@@ -167,7 +166,7 @@ private readonly apiToken = inject(TokenService);
               if(this.hallTemp){
                 this.seatTemp=this.screeningTemp ? this.seats.find(x=>x.ticketId==ticket.id):undefined;
 
-                this.instProfilTicket= new ProfilTicket()
+                this.instProfilTicket= new ProfilTicket();
                 this.instProfilTicket.id=ticket.id;
                 this.instProfilTicket.data=ticket.date;
                 this.instProfilTicket.price=ticket.price;

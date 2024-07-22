@@ -1,1 +1,43 @@
-<p>seats works!</p>
+<div class="container">
+    <h1>Select seats</h1>
+    <div class="screen"></div>
+    <div class="seats">
+      <div *ngFor="let row of seats; let rowIndex = index" class="seat-row">
+        <div *ngFor="let seat of row; let seatIndex = index" 
+             [ngClass]="{
+               'seat': true, 
+               'occupied': seat === 'occupied', 
+               'selected': seat === 'selected', 
+               'available': seat === 'available'
+             }"
+             (click)="toggleSeat(rowIndex, seatIndex)">
+        </div>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <div class="info">
+        <div>
+          <span class="label">Nazwa filmu:</span>
+          <span class="value">{{movie?.name}}</span>
+        </div>
+        <div>
+          <span class="label">Godzina seansu:</span>
+          <span class="value">[godzina seansu]</span>
+        </div>
+        <div>
+          <span class="label">Data:</span>
+          <span class="value">[Data]</span>
+        </div>
+        <div>
+          <span class="label">Numer hali:</span>
+          <span class="value">[numer hali]</span>
+        </div>
+        <div>
+          <span class="label">Informacja na temat miejsc siedzących:</span>
+          <span class="value">[informacja na temat miejsc siedzących]</span>
+        </div>
+      </div>
+      <button class="buy-button">Buy</button>
+    </div>
+  </div>
+  

@@ -1,6 +1,10 @@
 <header>
-    <h1>{{title}} </h1>
-    
-    <button class="button" (click)="navigate()">{{title}}</button>
-  </header>
+    <h1>Cinema </h1>
+    <div class="nav">
+      <button class="button" (click)="navHome()">Home</button>
+      <button class="button" *ngIf="isLoggedIn"(click)="navProfil()">Profile</button>
+      <button class="button" *ngIf="!isLoggedIn"(click)="navLogReg()">Login/Register</button>
+      <button class="button" *ngIf="isLoggedIn"(click)="logOut()">Logout</button>
+    </div>
+</header>
 <router-outlet></router-outlet>
