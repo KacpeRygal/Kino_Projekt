@@ -39,10 +39,16 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("getSeats/{id}")]
-        public IEnumerable<SeatResponseDTO> GetSeats(int id)
+        [Route("getSeat/{id}")]
+        public SeatResponseDTO GetSeat(int id)
         {
-            return this.ticketService.GetSeats(id);
+            return this.ticketService.GetSeat(id);
+        }
+        [HttpGet]
+        [Route("TicketForSeat/{userId}/{screeningID}/{date}")]
+        public TicketResponseDTO GetTicketForSeats(int userId, int screeningID,DateTime date) 
+        {
+            return this.ticketService.GetTicketForSeats(userId, screeningID,date);
         }
     }
 }

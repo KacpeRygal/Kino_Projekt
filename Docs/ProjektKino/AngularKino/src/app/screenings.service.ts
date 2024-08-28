@@ -31,6 +31,10 @@ export class ScreeningsService {
     return this.httpClient.get<Ticket[]>('https://localhost:7204/api/Screenings/getTickets/'+id)
   }
 
+  public getMovie(id: number){
+    return this.httpClient.get<Ticket[]>('https://localhost:7204/api/Screenings/Movie/'+id)
+  }
+
   public getScreenings(){
     return this.httpClient.get<Screening[]>('https://localhost:7204/api/Screenings/getScreenings')
   }

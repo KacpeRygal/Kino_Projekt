@@ -33,7 +33,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [Route("get1/{id}")]
-        public SeatResponseDTO GetSeat([FromQuery] int id)
+        public SeatResponseDTO GetSeat(int id)
         {
             return this.seatService.GetSeat(id);
         }

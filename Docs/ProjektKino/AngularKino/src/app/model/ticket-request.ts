@@ -1,8 +1,8 @@
 import { DatePipe } from "@angular/common";
 
 export interface TicketRequest {
-    userId:number;
-    screeningID:number;
-    price:number;
-    date:string;
+    userID:number|undefined;
+    screeningID:number|undefined;
+    price:number|undefined;
+    date:string|undefined;
 }

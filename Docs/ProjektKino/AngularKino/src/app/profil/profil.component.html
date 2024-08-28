@@ -1,7 +1,6 @@
 <div class="profile-container">
   <div class="header">
     <h1>Profile</h1>
-    <button class="home-button">Home page</button>
   </div>
   <div class="user-info">
     <div>
@@ -10,7 +9,7 @@
     </div>
     <div>
       <label>Account type</label>
-      <div class="user-detail">{{ getUzytkownikTypText(user.type)}}</div>
+      <div class="user-detail">{{getUserTypeText(user.type)}}</div>
     </div>
   </div>
   <div class="tabs">
@@ -19,7 +18,7 @@
   </div>
   <div class="content" *ngIf="activeTab === 'opinions'">
     <div class="opinion" *ngFor="let opinion of profilOpinions">
-     <h3> {{ opinion.movieName }}</h3>
+     <h3 (click)="toMovie(opinion.movieId)"> {{ opinion.movieName }}</h3>
       <p> {{ opinion.content }}</p>
       <p><strong>Rating:</strong>{{ opinion.value }}</p>
     </div>
@@ -27,7 +26,7 @@
   <div class="content" *ngIf="activeTab === 'tickets'">
     <div class="ticket" *ngFor="let ticket of profilTickets">
       <h3>Ticket nr {{ticket.id}}</h3> 
-      <p><strong>Movie name: </strong>{{ticket.movieName}}</p>
+      <p (click)="toMovie(ticket.movieId)"><strong>Movie name: </strong>{{ticket.movieName}}</p>
       <p><strong>Price: </strong>{{ ticket.price }} zł</p>
       <p><strong>Showtime: </strong> {{ ticket.screeningData }}</p>
       <p><strong>Date: {{ticket.data}}</strong></p>

@@ -31,8 +31,6 @@ export class LogRegComponent {
     });
   }
 
-
-  //logowanie
   login(form: NgForm) {
     const credentials = JSON.stringify({
       username: form.value.login,
@@ -61,7 +59,6 @@ export class LogRegComponent {
     });
   }
 
-//rejestracja
   register() {
     if (this.registerData.password !== this.registerData.repeatPassword) {
       alert("Passwords do not match!");
@@ -70,7 +67,7 @@ export class LogRegComponent {
     const user = {
       login: this.registerData.login,
       password: this.registerData.password,
-      type:0,
+      type:2,
       name: this.registerData.name,
       canReduce:false
     };

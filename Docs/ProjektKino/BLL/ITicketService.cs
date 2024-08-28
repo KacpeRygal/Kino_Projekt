@@ -10,9 +10,11 @@ namespace BLL
     public interface ITicketService
     {
         TicketResponseDTO GetTicket(int id);
-        IEnumerable<SeatResponseDTO> GetSeats(int id);
+        TicketResponseDTO GetTicketForSeats(int userId, int screeningID,DateTime date);
+        SeatResponseDTO GetSeat(int id);
         void DeleteTicket(int id);
         void PutTicket(int id, TicketRequestDTO ticketRequestDTO);
         void PostTicket(TicketRequestDTO ticketRequestDTO);
+
     }
 }

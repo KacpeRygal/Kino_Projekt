@@ -1,7 +1,7 @@
 export interface SeatRequest {
-    tickerId:number;
-    hallId:number;
-    row:number;
-    column:number;
-    occupied:boolean;
+    ticketID:number|undefined;
+    hallID:number|undefined;
+    row:number|undefined;
+    column:number|undefined;
+    occupied:boolean|undefined;
 }

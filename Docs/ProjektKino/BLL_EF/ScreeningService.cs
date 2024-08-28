@@ -37,6 +37,22 @@ namespace BLL_EF
             return response;
         }
 
+        public ScreeningResponseDTO GetScreaningMovie(int id)
+        {
+            Screening screening = dbContext.Screening.Where(x=>x.MovieID == id).FirstOrDefault();
+            if (screening == null) return null;
+
+            ScreeningResponseDTO response = new ScreeningResponseDTO
+            {
+                ID = screening.ID,
+                Date = screening.Date,
+                HallID = screening.HallID,
+                MovieID = screening.MovieID,
+            };
+            return response;
+        }
+
+
         public IEnumerable<ScreeningResponseDTO> GetScreenings() 
         {
             var screens = dbContext.Screening;

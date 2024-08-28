@@ -44,9 +44,9 @@ namespace BLL_EF
             Ticket ticket = new()
             {
                 UserID = ticketRequestDTO.UserID,
-                Date = ticketRequestDTO.Date,
                 ScreeningID = ticketRequestDTO.ScreeningID,
-                Price = ticketRequestDTO.Price
+                Price = ticketRequestDTO.Price,
+                Date = ticketRequestDTO.Date,
             };
             dbContext.Ticket.Add(ticket);
             dbContext.SaveChanges();
@@ -62,24 +62,36 @@ namespace BLL_EF
             dbContext.SaveChanges();
         }
 
-        public IEnumerable<SeatResponseDTO> GetSeats(int id)
+        public SeatResponseDTO GetSeat(int id)
         {
-            var seats = dbContext.Seat.Where(x => x.TicketID == id);
-
-            for (int i = 0; i < seats.Count(); i++)
-            {
-                Seat sc = seats.ElementAt(i);
+            Seat seat = dbContext.Seat.Where(x => x.TicketID == id).FirstOrDefault();
                 SeatResponseDTO response = new SeatResponseDTO
                 {
-                    ID = sc.ID,
-                    TicketID = sc.TicketID,
-                    HallID = sc.HallID,
-                    Column = sc.Column,
-                    Row = sc.Row,
-                    Occupied = sc.Occupied
+                    ID = seat.ID,
+                    TicketID = seat.TicketID,
+                    HallID = seat.HallID,
+                    Column = seat.Column,
+                    Row = seat.Row,
+                    Occupied = seat.Occupied
                 };
-                yield return response;
-            }
+                return response;
+        }
+        public TicketResponseDTO GetTicketForSeats(int userId,int screeningID, DateTime date)
+        {
+            Ticket ticket = dbContext.Ticket.Where(x => x.UserID == userId && x.ScreeningID == screeningID && x.Date.Equals(date))
+        .FirstOrDefault();
+
+            if (ticket == null) return null;
+
+            TicketResponseDTO response = new TicketResponseDTO
+            {
+                ID = ticket.ID,
+                UserID = ticket.UserID,
+                Date = ticket.Date,
+                ScreeningID = ticket.ScreeningID,
+                Price = ticket.Price
+            };
+            return response;
         }
     }
 }

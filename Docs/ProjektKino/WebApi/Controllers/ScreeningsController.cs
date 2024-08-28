@@ -37,6 +37,12 @@ namespace WebApi.Controllers
         {
             return this.screeningService.GetScreening(id);
         }
+        [HttpGet]
+        [Route("Movie/{id}")]
+        public ScreeningResponseDTO GetScreeningMovie(int id)
+        {
+            return this.screeningService.GetScreaningMovie(id);
+        }
 
         [HttpGet]
         [Route("getTickets/{id}")]

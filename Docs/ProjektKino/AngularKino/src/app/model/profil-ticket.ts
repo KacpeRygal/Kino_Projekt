@@ -1,10 +1,11 @@
 export class ProfilTicket {
-    id: number = 0;
-    data: string = '';
-    price: number = 0;
-    movieName: string = '';
-    screeningData: string = '';
-    hallNumber: number = 0;
-    seatRow: number = 0;
-    seatCollumn: number = 0;
+    id: number|undefined;
+    movieId:number =1;
+    data: string |undefined;
+    price: number|undefined;
+    movieName: string |undefined;
+    screeningData: string |undefined;
+    hallNumber: number |undefined;
+    seatRow: number |undefined;
+    seatCollumn: number |undefined;
 }

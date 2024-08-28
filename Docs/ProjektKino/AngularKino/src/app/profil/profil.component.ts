@@ -20,6 +20,7 @@ import { Hall } from '../model/hall';
 import { HallsService } from '../halls.service';
 import { forkJoin } from 'rxjs';
 import { Seat } from '../model/seat';
+import { SeatsService } from '../seats.service';
 
 
 @Component({
@@ -43,6 +44,8 @@ private readonly apiToken = inject(TokenService);
 
   profilTickets:ProfilTicket[]=[];
   profilOpinions:ProfilOpinion[]=[];
+  Dateticket:Date|undefined;
+  DateShowtime:Date|undefined;
 
   instProfilOpinion: ProfilOpinion|undefined;
   instProfilTicket: ProfilTicket|undefined;
@@ -56,7 +59,7 @@ private readonly apiToken = inject(TokenService);
 
   constructor( private route: ActivatedRoute, private userService: UsersService,
     private router: Router, private app: AppComponent,
-    private screeningService: ScreeningsService,private movieService: MoviesService,private hallService:HallsService) {}
+    private screeningService: ScreeningsService,private movieService: MoviesService,private hallService:HallsService,private ticketService:TicketsService) {}
 
   ngOnInit(): void {
     if(this.apiToken.getToken()=="") this.router.navigateByUrl("logreg");
@@ -64,7 +67,7 @@ private readonly apiToken = inject(TokenService);
     console.log(this.tickets.length);
   }
 
-  getUzytkownikTypText(rodzaj: UserTypeEnum): string {
+  getUserTypeText(rodzaj: UserTypeEnum): string {
     switch (rodzaj) {
       case UserTypeEnum.Admin:
         return 'Admin';
@@ -115,9 +118,8 @@ private readonly apiToken = inject(TokenService);
       error: (err) => console.log('Error fetching users tickets : ', err)
     });
   }
-  
-  getScreenings(){
 
+  getScreenings(){
     this.tickets.map(ticket=>
       this.screeningService.getScreening(ticket.screeningID).subscribe({
         next: (res) => {
@@ -135,13 +137,23 @@ private readonly apiToken = inject(TokenService);
       this.movieService.getMovie(screening.movieID).subscribe({
         next: (res) => {
            this.movies.push(res);
-           this.getHalls();
+           this.getSeats();
         },
         error: (err) => console.log('Error fetching screening: ', err)
       })
     );
   }
-
+getSeats(){
+  this.tickets.map(ticket=>
+      this.ticketService.getSeat(ticket.id).subscribe({
+          next: (res) => {
+             this.seats.push(res);
+             this.getHalls();
+          },
+          error: (err) => console.log('Error fetching screening: ', err)
+        })
+      );
+}
   getHalls() {
     this.screenings.map(screening=>
       this.hallService.getHall(screening.hallID).subscribe({
@@ -156,7 +168,7 @@ private readonly apiToken = inject(TokenService);
   }
   combineTicket(){
     this.tickets.forEach(ticket=>
-    {
+      {
         if(this.profilTickets.length!=this.tickets.length){
           this.screeningTemp=this.screenings.find(x=>x.id==ticket.screeningID);
           if(this.screeningTemp){
@@ -164,19 +176,29 @@ private readonly apiToken = inject(TokenService);
             if(this.movieTemp){
               this.hallTemp=this.screeningTemp ? this.halls.find(x=>x.id==this.screeningTemp?.hallID):undefined;
               if(this.hallTemp){
-                this.seatTemp=this.screeningTemp ? this.seats.find(x=>x.ticketId==ticket.id):undefined;
-
+                this.seatTemp=this.screeningTemp ? this.seats.find(x=>x.ticketID==ticket.id):undefined;
+                if(this.seatTemp){
                 this.instProfilTicket= new ProfilTicket();
                 this.instProfilTicket.id=ticket.id;
-                this.instProfilTicket.data=ticket.date;
+
+                this.Dateticket=new Date(ticket.date);
+                this.instProfilTicket.data=
+                this.Dateticket.getMinutes()+":"+ this.Dateticket.getHours()+" on "+ this.Dateticket.getDay()+"."+ this.Dateticket.getMonth()+"."+this.Dateticket.getFullYear();
+
                 this.instProfilTicket.price=ticket.price;
                 this.instProfilTicket.movieName=this.movieTemp.name;
-                this.instProfilTicket.screeningData=this.screeningTemp.date;
+                this.instProfilTicket.movieId=this.movieTemp.id;
+
+                this.DateShowtime=new Date(this.screeningTemp.date);
+                this.instProfilTicket.screeningData=
+                this.DateShowtime.getMinutes()+":"+this.DateShowtime.getHours()+" on "+this.DateShowtime.getDay()+"."+this.DateShowtime.getMonth()+"."+this.DateShowtime.getFullYear();
+
                 this.instProfilTicket.hallNumber=this.hallTemp.id;
-                this.instProfilTicket.seatRow=this.hallTemp.rows;                                                                //tu będzie położenie siedzienia
-                this.instProfilTicket.seatCollumn=this.hallTemp.columns;                                                         //trzeba dodać możliwość dodwawnia siedzień
+                this.instProfilTicket.seatRow=(this.seatTemp.row+1);                                                            
+                this.instProfilTicket.seatCollumn=(this.seatTemp.column+1);                                                 
 
                 this.profilTickets.push(this.instProfilTicket);
+                }
               }
             }
           }
@@ -195,6 +217,7 @@ private readonly apiToken = inject(TokenService);
                
                 this.instProfilOpinion= new ProfilOpinion()
                 this.instProfilOpinion.content=opinion.content;
+                this.instProfilOpinion.movieId=this.movieTemp.id;
                 this.instProfilOpinion.movieName=this.movieTemp.name;
                 this.instProfilOpinion.value=opinion.value;
 
@@ -213,4 +236,7 @@ private readonly apiToken = inject(TokenService);
     this.activeTab = 'tickets';
   }
 
+  toMovie(id:number){
+    this.router.navigate(["/movie/"+id]);
+  }
 }
