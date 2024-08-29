@@ -43,8 +43,8 @@ namespace Model
 
     public enum UserTypeEnum
     {
-        Admin,
-        User,
-        Reviewer
+        Admin=0,
+        User=1,
+        Reviewer=2
     }
 }
