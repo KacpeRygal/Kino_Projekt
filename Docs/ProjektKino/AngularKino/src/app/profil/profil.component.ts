@@ -20,6 +20,8 @@ import { Hall } from '../model/hall';
 import { HallsService } from '../halls.service';
 import { forkJoin } from 'rxjs';
 import { Seat } from '../model/seat';
+import { OpinionsService } from '../opinions.service';
+import { ScreeningRequest } from '../model/screening-request';
 
 
 @Component({
@@ -34,6 +36,7 @@ private readonly apiToken = inject(TokenService);
   user!: User;
   activeTab: string ="tickets";
   
+  users:User[]=[];
   tickets:Ticket[]=[];
   opinions:Opinion[]=[];
   movies:Movie[]=[];
@@ -56,11 +59,13 @@ private readonly apiToken = inject(TokenService);
 
   constructor( private route: ActivatedRoute, private userService: UsersService,
     private router: Router, private app: AppComponent,
-    private screeningService: ScreeningsService,private movieService: MoviesService,private hallService:HallsService) {}
+    private screeningService: ScreeningsService,private movieService: MoviesService,private hallService:HallsService,private opinionService: OpinionsService) {}
 
   ngOnInit(): void {
     if(this.apiToken.getToken()=="") this.router.navigateByUrl("logreg");
     this.getCurrentUser();
+    this.getUsers();
+    this.getAllScreenings();
     console.log(this.tickets.length);
   }
 
@@ -76,6 +81,26 @@ private readonly apiToken = inject(TokenService);
         return 'Brak';
     }
 
+  }
+
+  getUsers(){
+    console.log(this.apiToken.decodedToken);
+    this.userService.getUsers().subscribe({
+      next: (res) => {
+        this.users = res;
+      },
+      error: (err) => console.log('Error fetching users : ', err)
+    });
+  }
+
+  getAllScreenings(){
+    console.log(this.apiToken.decodedToken);
+    this.screeningService.getScreenings().subscribe({
+      next: (res) => {
+        this.screenings = res;
+      },
+      error: (err) => console.log('Error fetching users : ', err)
+    });
   }
 
   getCurrentUser() {
@@ -212,5 +237,39 @@ private readonly apiToken = inject(TokenService);
 
   showTickets() {
     this.activeTab = 'tickets';
+  }
+
+  showUsers(){
+    this.activeTab = 'usersAdmin'
+  }
+
+  showScreeningsAdd(){
+    this.activeTab = 'screenings-add'
+  }
+
+  showScreeningsDelete(){
+    this.activeTab = 'screenings-delete'
+  }
+
+  banUserPermanently(id:number){
+    this.userService.delete(id).subscribe()
+    this.getUsers()
+  }
+
+  deleteScreening(id:number){
+    this.screeningService.delete(id).subscribe()
+    this.getAllScreenings()
+  }
+
+  public screeningToAdd: ScreeningRequest = {
+    hallID: null,
+    movieID: null,
+    date: null
+  };
+
+  onSubmit(event: any): void{
+   
+    this.screeningService.post(this.screeningToAdd).subscribe()
+    this.getAllScreenings()
   }
 }
