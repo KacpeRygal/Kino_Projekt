@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f2JXJvsv6D1oLJDskl6HjN3Na/X74pWfXOzf/KhiLCFtIOfqTl9U7Gqh7WHXlWb5KD8grYgjvnWJBWI9mU4Oqg==",
+  "dgSpecHash": "mITivgTeXjlsa8lo+bSSjuGGqSQgaJ16TiLOFKkd6v5P0Jh3/cyYR9V6ymaMwg8njCbmbjTwjH2seh7E04tDtg==",
   "success": true,
-  "projectFilePath": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\K\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\K\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

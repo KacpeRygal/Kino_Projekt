@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t5o7xHg3PtsdRQz3HpDk5CpklfUOavC5xx6Y8ydhaIQ68/P5CzZsglQOhD7Ar6HFq6yMvPNftPb31WhRnW35sg==",
+  "dgSpecHash": "Gs6igPNnTsasNlh5J1kEiJbWDQfqO4pWVG2NsagZzi5SHPaNXvY8LfnKEHYbwxOhxmnzQMtpwRPtXXkPVjyJQg==",
   "success": true,
-  "projectFilePath": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj",
+  "projectFilePath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\K\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\K\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

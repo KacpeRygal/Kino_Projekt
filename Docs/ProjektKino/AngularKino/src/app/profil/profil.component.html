@@ -1,6 +1,7 @@
 <div class="profile-container">
   <div class="header">
     <h1>Profile</h1>
+    <button class="home-button">Home page</button>
   </div>
   <div class="user-info">
     <div>
@@ -9,7 +10,7 @@
     </div>
     <div>
       <label>Account type</label>
-      <div class="user-detail">{{getUserTypeText(user.type)}}</div>
+      <div class="user-detail">{{ getUzytkownikTypText(user.type)}}</div>
     </div>
   </div>
   <div class="tabs">
@@ -18,7 +19,7 @@
   </div>
   <div class="content" *ngIf="activeTab === 'opinions'">
     <div class="opinion" *ngFor="let opinion of profilOpinions">
-     <h3 (click)="toMovie(opinion.movieId)"> {{ opinion.movieName }}</h3>
+     <h3> {{ opinion.movieName }}</h3>
       <p> {{ opinion.content }}</p>
       <p><strong>Rating:</strong>{{ opinion.value }}</p>
     </div>
@@ -26,12 +27,78 @@
   <div class="content" *ngIf="activeTab === 'tickets'">
     <div class="ticket" *ngFor="let ticket of profilTickets">
       <h3>Ticket nr {{ticket.id}}</h3> 
-      <p (click)="toMovie(ticket.movieId)"><strong>Movie name: </strong>{{ticket.movieName}}</p>
+      <p><strong>Movie name: </strong>{{ticket.movieName}}</p>
       <p><strong>Price: </strong>{{ ticket.price }} zł</p>
       <p><strong>Showtime: </strong> {{ ticket.screeningData }}</p>
       <p><strong>Date: {{ticket.data}}</strong></p>
-      <p><strong>Hall number:</strong> {{ ticket.hallNumber }}   
-         <strong>Seat:</strong> col:{{ticket.seatCollumn}} row:{{ticket.seatRow}}  </p>
+      <p><strong>Hall number:</strong> {{ ticket.hallNumber }}         <strong>Seat:</strong> col:{{ticket.seatCollumn}} row:{{ticket.seatRow}}  </p>
     </div> 
   </div>
+
+  <div *ngIf="user.type === 0">
+    <div class="header">
+        <h1>Panel administratora</h1>
+    </div>
+    <div class="tabs">
+      <button (click)="showUsers()" [class.active]="activeTab === 'usersAdmin'">Ban users</button>
+      <button (click)="showScreeningsAdd()" [class.active]="activeTab === 'usersAdmin'">Add Screening</button>
+      <button (click)="showScreeningsDelete()" [class.active]="activeTab === 'usersAdmin'">Delete screening</button>
+    </div>
+
+    <div class="content" *ngIf="activeTab === 'usersAdmin'">
+      <div class="moderation" *ngFor="let u of users">
+        <div class="user-info">{{u.name}}
+          <button *ngIf="user.id != u.id " (click)="banUserPermanently(u.id)">Infinite ban</button>
+        </div>
+      </div>
+    </div>
+    <div class="content" *ngIf="activeTab === 'screenings-add'">
+      <div class="moderation">
+        <form #opinionForm="ngForm" (ngSubmit)="onSubmit($event)" id="opinionForm">
+          <label for="hallID">Hall </label>
+          <input 
+          type="number" 
+          id="hallID" 
+          name="hallID" 
+          [(ngModel)]="screeningToAdd.hallID" 
+          required
+          />
+          <label for="movieID">Movie </label>
+          <input 
+          type="number" 
+          id="movieID" 
+          name="movieID" 
+          [(ngModel)]="screeningToAdd.movieID" 
+          required
+          />
+          <label for="date">Date </label>
+          <input 
+          type="content" 
+          id="date" 
+          name="date" 
+          [(ngModel)]="screeningToAdd.date" 
+          required
+          />
+          <label for="content"></label>
+          <input class="add-opinion-button"
+              type="submit" 
+              name="submit" 
+              id="submit" 
+              value="Add Screening" 
+              />
+      </form>
+      <div>
+        Use date format as shown here: 2024-07-16T22:30:00.181
+      </div>
+      </div>
+    </div>
+    <div class="content" *ngIf="activeTab === 'screenings-delete'">
+      <div class="moderation" *ngFor="let s of screenings">
+        <div class="user-info">ID of screening: {{s.id}} at {{s.date}}
+          <button (click)="deleteScreening(s.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+

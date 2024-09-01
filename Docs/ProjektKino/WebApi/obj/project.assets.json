@@ -3246,11 +3246,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\WebApi.csproj",
+      "projectPath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjektKino\\Docs\\ProjektKino\\WebApi\\obj\\",
+      "outputPath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3272,11 +3272,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj": {
-              "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj"
+            "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj": {
+              "projectPath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\BLL_EF\\BLL_EF.csproj"
             },
-            "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\DAL.csproj": {
-              "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\DAL.csproj"
+            "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\DAL\\DAL.csproj"
             }
           }
         }

@@ -1,7 +1,7 @@
 import { DatePipe } from "@angular/common";
 
 export interface ScreeningRequest {
-    hallID:number;
-    movieID:number;
-    date:string;
+    hallID:number|null;
+    movieID:number|null;
+    date:string|null;
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oOmAKZf1OtC4gKrl9TTvaiC4nJFT+cFUxT5QZaa1jVOxUot7VrvlZGWx3B61dbgLlF6bOH5ODTP2RpzKAGvh0g==",
+  "dgSpecHash": "2o4B3/d+Y/f6D1Nh3fCU7ki05Ca4Fs6jZgGIwqOJ79A0lbuWepbDAU1czSO9jUJiezevtfHGad+bik4vwxRwFw==",
   "success": true,
-  "projectFilePath": "D:\\ProjektKino\\Docs\\ProjektKino\\DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\K\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\K\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

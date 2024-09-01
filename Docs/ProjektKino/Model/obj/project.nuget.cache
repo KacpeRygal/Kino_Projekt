@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NikEqVCgWwIKrJGlO6wv6Mb5KxGOpsGYY76RbzwYIjWTS8HlewAsrqZ5QYHGt/f65RFD5g3dOHFtGFDOnl081A==",
+  "dgSpecHash": "zM5QuGehyaiqPhAJ2vz/qEpcf0Tjdf7TgqTdrrnX8NEaeU/0jyn2UEd7jexXSZNjFZ5zWs5rtdWFq6m83sxbww==",
   "success": true,
-  "projectFilePath": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Model.csproj",
+  "projectFilePath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\Model\\Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\K\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "C:\\Users\\K\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",

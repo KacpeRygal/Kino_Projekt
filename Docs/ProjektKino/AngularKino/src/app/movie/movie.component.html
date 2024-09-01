@@ -3,16 +3,42 @@
     <div class="field">
         <h1>{{movie.at(0)?.name}}</h1>
         <div class="field">
-        <p>
-            {{movie.at(0)?.language}} | {{movie.at(0)?.time}}
-        </p>
-        <p>Oceniony na: {{movie.at(0)?.score}}</p>
+            <p>
+                {{movie.at(0)?.language}} | {{movieTime}}
+            </p>
+            <p>Oceniony na: {{movieScore}}</p>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="field">
-        Dodaj opinie
+        <form #opinionForm="ngForm" (ngSubmit)="onSubmit($event)" id="opinionForm">
+            <label for="value"></label>
+            <input 
+            type="number" 
+            id="value" 
+            name="value" 
+            [(ngModel)]="opinionToAdd.value" 
+            required
+            min="0"
+            max="10"/>
+            <label for="content"></label>
+            <input class="add-opinion-button"
+                type="submit" 
+                name="submit" 
+                id="submit" 
+                value="Dodaj opinię" 
+                />
+        </form>
+    <textarea 
+        id="content" 
+        name="content" 
+        [(ngModel)]="opinionToAdd.content" 
+        required 
+        minlength='1' 
+        maxlength="400" 
+        form="opinionForm">
+    </textarea>
     </div>
 </div>
 <div class="container">

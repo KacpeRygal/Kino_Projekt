@@ -567,11 +567,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\Model.csproj",
+      "projectPath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjektKino\\Docs\\ProjektKino\\Model\\obj\\",
+      "outputPath": "C:\\Users\\K\\Desktop\\Kino\\Docs\\ProjektKino\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
