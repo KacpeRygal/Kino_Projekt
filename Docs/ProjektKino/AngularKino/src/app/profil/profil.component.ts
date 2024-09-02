@@ -202,6 +202,11 @@ private readonly apiToken = inject(TokenService);
                 this.instProfilTicket.seatRow=this.hallTemp.rows;                                                                //tu będzie położenie siedzienia
                 this.instProfilTicket.seatCollumn=this.hallTemp.columns;                                                         //trzeba dodać możliwość dodwawnia siedzień
 
+                this.instProfilTicket.movieTime = ''
+                let date: Date = new Date(this.movieTemp.time)
+                let minutes:number = date.getHours() * 60 + date.getMinutes()
+                this.instProfilTicket.movieTime += minutes + " min"
+
                 this.profilTickets.push(this.instProfilTicket);
               }
             }
